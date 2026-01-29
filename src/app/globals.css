@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@theme {
+  /* Primary: Vert Forêt & Sauge */
+  --color-primary: #2d6a4f;
+  --color-primary-light: #81b29a;
+
+  /* Secondary: Terracotta */
+  --color-secondary: #e07a5f;
+  --color-secondary-hover: #c85d42;
+
+  /* Accent: Ocre */
+  --color-accent: #f2cc8f;
+
+  /* Neutral: Fond & Texte */
+  --color-neutral-bg: #f4f1de;
+  --color-neutral-text: #3d405b;
+
+  /* --- TYPOGRAPHIE --- */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}

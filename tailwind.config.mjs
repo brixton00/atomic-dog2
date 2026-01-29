@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 const tailwindConfig = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
