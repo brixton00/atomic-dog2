@@ -7,7 +7,6 @@ import { Menu, X, PawPrint } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Fonction pour fermer le menu quand on clique sur un lien (UX Mobile)
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
@@ -23,7 +22,7 @@ export default function Navbar() {
     <nav className="bg-neutral-bg shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          {/* Logo / Nom du site */}
+          {/* logo + nom du site */}
           <Link
             href="/"
             className="flex items-center gap-2 text-primary hover:opacity-80 transition"
@@ -34,7 +33,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Menu desktop */}
+          {/* menu desktop */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <Link
@@ -47,7 +46,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Menu burger mobile */}
+          {/* menu burger mobile */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +63,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu mobile*/}
+      {/* menu mobile*/}
       {/* affichage conditionnel du bloc si isOpen === true */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">

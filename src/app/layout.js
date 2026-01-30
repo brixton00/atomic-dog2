@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/layout/Navbar";
-import { Inter } from "next/font/google"; // Police propre et lisible
+import Footer from "@/components/layout/Footer";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,19 +17,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.className} bg-neutral-bg text-neutral-text min-h-screen flex flex-col`}
       >
-        {/* En-tête fixe */}
+        {/* en tête fixe*/}
         <Navbar />
 
-        {/* Contenu principal qui change selon la page */}
+        {/* contenu principal - change selon la page */}
         <main className="flex-grow">{children}</main>
 
-        {/* Footer simple (On pourra le séparer dans un composant plus tard) */}
-        <footer className="bg-primary text-white py-6 text-center mt-auto">
-          <p className="text-sm">
-            © {new Date().getFullYear()} Éducation Canine Positive. Tous droits
-            réservés.
-          </p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
