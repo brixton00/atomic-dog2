@@ -61,16 +61,6 @@ export default function About() {
                 sur les dernières avancées scientifiques en éthologie.
               </p>
             </div>
-
-            <div className="pt-4">
-              <Image
-                src="/assets/logos/Design sans titre.png"
-                alt="Signature"
-                width={150}
-                height={60}
-                className="opacity-80 mx-auto lg:mx-0"
-              />
-            </div>
           </div>
         </div>
       </section>

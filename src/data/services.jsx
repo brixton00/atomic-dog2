@@ -14,8 +14,8 @@ export const servicesData = [
     shortDesc:
       "Le point de départ obligatoire. Analyse complète de la relation et de l'environnement.",
     fullDesc:
-      "Avant toute chose, je dois comprendre qui est votre chien et comment vous vivez ensemble. Ce bilan à domicile nous permet d'identifier les causes profondes des comportements gênants.",
-    price: "65 €",
+      "Avant toute chose, je dois comprendre qui est votre chien et comment vous vivez ensemble. Ce bilan à domicile (durée max 2h) nous permet d'identifier les causes profondes des comportements gênants.",
+    price: "65 € / séance", // [cite: 71]
     duration: "1h30 - 2h",
     icon: ClipboardList,
     isFeatured: true,
@@ -31,13 +31,13 @@ export const servicesData = [
   },
   {
     id: "chiot",
-    title: "École du Chiot",
+    title: "École du Chiot (Curso Cachorro)",
     shortDesc:
       "Les bonnes bases : propreté, socialisation et gestion des émotions.",
     fullDesc:
-      "L'arrivée d'un chiot est un bouleversement. Je vous guide pour partir sur des bases saines et éviter les erreurs classiques qui créent des problèmes futurs.",
-    price: "270 € (Forfait 6 séances)",
-    duration: "Suivi sur 1 an",
+      "L'arrivée d'un chiot est un bouleversement. Je vous guide pour partir sur des bases saines. Formule complète de 6 séances réparties sur 1 an pour suivre l'évolution.",
+    price: "270 € (Forfait)", // [cite: 77]
+    duration: "6 séances sur 1 an",
     icon: Dog,
     isFeatured: true,
     href: "/services#chiot",
@@ -55,18 +55,18 @@ export const servicesData = [
     shortDesc:
       "Marche en laisse, rappel, pas bouger. Méthode douce sans contrainte.",
     fullDesc:
-      "Il n'est jamais trop tard pour apprendre. Que ce soit pour acquérir les ordres de base ou perfectionner l'écoute, nous travaillons dans le respect du rythme du chien.",
-    price: "50 € / séance",
+      "Il n'est jamais trop tard pour apprendre. Tarifs dégressifs disponibles : Pack 4 séances à 195€ ou Pack 8 séances à 380€.",
+    price: "50 € / séance", // [cite: 78, 80, 82]
     duration: "1h",
     icon: GraduationCap,
     isFeatured: true,
     href: "/services#education",
     image: "/assets/images/matt-bradford-aunger-t_BNjSfj6Og-unsplash.jpg",
     benefits: [
-      "Marche en laisse détendue",
-      "Rappel fiable en toutes circonstances",
-      "Positions (Assis, Couché, Pas bouger)",
-      "Gestion de l'excitation",
+      "Séance à l'unité : 50 €",
+      "Pack 4 séances : 195 € (au lieu de 200€)",
+      "Pack 8 séances : 380 € (au lieu de 400€)",
+      "Rappel, Marche en laisse, Positions",
     ],
   },
   {
@@ -75,57 +75,57 @@ export const servicesData = [
     shortDesc:
       "Promenades encadrées pour travailler la socialisation et les codes canins.",
     fullDesc:
-      "Votre chien tire en laisse ou réagit aux autres chiens ? Ces balades collectives ou individuelles permettent de travailler en situation réelle.",
-    price: "18 € / unité",
+      "Votre chien tire en laisse ou réagit aux autres chiens ? Travaillez en situation réelle. Disponible à l'unité ou en Pack de 5 balades pour 60€.",
+    price: "18 € / heure", // [cite: 72, 73]
     duration: "45 min - 1h",
     icon: Footprints,
     isFeatured: true,
     href: "/services#balade",
     image: "/assets/images/andrew-leu-arvFL4drLKQ-unsplash.jpg",
     benefits: [
+      "Séance à l'unité : 18 €",
+      "Pack 5 balades : 60 €",
       "Lecture des codes canins",
-      "Rencontres congénères positives",
       "Dépense physique et mentale",
-      "Généralisation des acquis en extérieur",
     ],
   },
   {
     id: "troubles",
-    title: "Rééducation Comportementale",
+    title: "Modification de Comportement", // [cite: 52]
     shortDesc:
-      "Gestion de la réactivité, anxiété de séparation, protection de ressources.",
+      "Gestion de la réactivité, anxiété, agressivité. Travail sur mesure.",
     fullDesc:
-      "Pour les problématiques complexes (agressivité, peurs intenses, destruction). Un travail sur mesure pour ramener de la sérénité au foyer.",
-    price: "Sur devis",
+      "Pour les problématiques complexes nécessitant un suivi rigoureux. Tarifs avantageux en pack : 3 séances (165€), 5 séances (270€) ou 10 séances (500€).",
+    price: "55 € / séance", // [cite: 83, 84, 85, 86]
     duration: "Personnalisé",
     icon: AlertTriangle,
     isFeatured: false,
     href: "/services#troubles",
-    image: "/assets/images/storm.jpg", // J'ai utilisé une de tes images 'storm' qui semble correspondre
+    image: "/assets/images/storm.jpg",
     benefits: [
-      "Désensibilisation progressive",
-      "Contre-conditionnement",
-      "Gestion de l'environnement",
-      "Sécurisation des interactions",
+      "Séance à l'unité : 55 €",
+      "Pack 3 séances : 165 €",
+      "Pack 5 séances : 270 €",
+      "Pack 10 séances : 500 €",
     ],
   },
   {
     id: "garderie",
-    title: "Visites à Domicile",
+    title: "Garde à Domicile (Guardería)",
     shortDesc: "Je prends soin de votre compagnon pendant votre absence.",
     fullDesc:
-      "Partez l'esprit tranquille. Je passe voir votre animal pour le nourrir, le sortir et jouer avec lui.",
-    price: "Dès 18 €",
-    duration: "30 min - 1h",
+      "Visites à domicile pour nourrir, sortir et jouer avec votre animal. Tarif à partir de 18€, session complète à 45€.",
+    price: "Dès 18 €", // [cite: 74, 75]
+    duration: "Variable",
     icon: Home,
     isFeatured: false,
     href: "/services#garderie",
     image: "/assets/images/ralu-gal-G8cB8hY3yvU-unsplash.jpg",
     benefits: [
+      "Session standard : 45 €",
       "Pas de stress du changement d'environnement",
       "Promenade de quartier incluse",
       "Nouvelles par SMS/Photos",
-      "Administration de médicaments si besoin",
     ],
   },
 ];
