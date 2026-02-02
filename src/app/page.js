@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MessageCircle, CheckCircle2 } from "lucide-react";
-import ServiceCard from "../components/cards/ServiceCard"; // Assure-toi que le chemin est bon
-import { servicesData } from "../data/services"; // Assure-toi que le chemin est bon
+import ServiceCard from "@/components/cards/serviceCard"; // Assure-toi que le chemin est bon
+import { servicesData } from "@/data/services"; // Assure-toi que le chemin est bon
 
 export default function Home() {
   // On filtre uniquement les services marqués comme "à la une"
