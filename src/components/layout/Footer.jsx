@@ -38,14 +38,9 @@ export default function Footer() {
             </p>
             <div className="flex gap-2 pt-1">
               <SocialLink
-                href="https://instagram.com"
+                href="https://instagram.com/atomicdog.k9"
                 icon={Instagram}
                 label="Instagram"
-              />
-              <SocialLink
-                href="https://facebook.com"
-                icon={Facebook}
-                label="Facebook"
               />
             </div>
           </div>
@@ -81,7 +76,7 @@ export default function Footer() {
                     Zone d'intervention
                   </span>
                   <span className="text-primary-light">
-                    Paris (75) & Proche Banlieue (30km)
+                    Alcanadre, Logroño, Estella-Lizarra, Tafalla, Calahorra, Pamplona, Navarre, La Rioja etc.
                   </span>
                 </div>
               </li>
@@ -111,20 +106,20 @@ export default function Footer() {
             <ul className="space-y-3 text-xs">
               <li>
                 <a
-                  href="tel:+33600000000"
+                  href="tel:+34632977059"
                   className="flex items-center gap-2 hover:text-white text-primary-light transition-colors"
                 >
                   <Phone className="h-4 w-4 text-secondary" />
-                  <span className="font-medium">06 00 00 00 00</span>
+                  <span className="font-medium">+34 632 97 70 59</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contact@atomic-dog.fr"
+                  href="mailto:atomicdog.canina@gmail.com"
                   className="flex items-center gap-2 hover:text-white text-primary-light transition-colors"
                 >
                   <Mail className="h-4 w-4 text-secondary" />
-                  <span className="font-medium">contact@atomic-dog.fr</span>
+                  <span className="font-medium">atomicdog.canina@gmail.com</span>
                 </a>
               </li>
               <li className="pt-2">
