@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Check, ArrowRight, CalendarDays } from "lucide-react";
+import { Check, ArrowRight, CalendarDays, Tag } from "lucide-react";
 import { servicesData } from "@/data/services";
 
 export default function Services() {
@@ -21,16 +21,21 @@ export default function Services() {
       {/* --- Liste des Services --- */}
       <div className="max-w-7xl mx-auto px-4 py-16 space-y-24">
         {servicesData.map((service, index) => {
-          const isEven = index % 2 === 0; // Pour alterner gauche/droite
+          const isEven = index % 2 === 0;
+
+          // Sécurisation des données prix
+          const displayPrice = service.pricing?.unit || service.price;
+          const priceDetail = service.pricing?.unitDetail || "";
+          const packs = service.pricing?.packs || [];
 
           return (
             <div
               key={service.id}
-              id={service.id} // Permet les ancres (ex: /services#bilan)
-              className={`flex flex-col lg:flex-row gap-12 items-center ${!isEven ? "lg:flex-row-reverse" : ""}`}
+              id={service.id}
+              className={`flex flex-col lg:flex-row gap-12 items-start ${!isEven ? "lg:flex-row-reverse" : ""}`}
             >
               {/* Image */}
-              <div className="w-full lg:w-1/2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+              <div className="w-full lg:w-1/2 relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl border-4 border-white sticky top-24">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -51,19 +56,43 @@ export default function Services() {
                   </h2>
                 </div>
 
-                <div className="text-2xl font-bold text-primary">
-                  {service.price}
-                  <span className="text-base font-normal text-neutral-text/60 ml-2">
-                    • Durée : {service.duration}
-                  </span>
-                </div>
-
                 <p className="text-lg text-neutral-text/80 leading-relaxed">
                   {service.fullDesc}
                 </p>
 
+                {/* --- BLOC PRIX & PACKS --- */}
+                <div className="bg-white rounded-2xl p-6 border border-primary/10 shadow-sm">
+                    <div className="flex items-baseline gap-2 mb-4">
+                        <span className="text-3xl font-bold text-primary">{displayPrice}</span>
+                        <span className="text-neutral-text/60">{priceDetail}</span>
+                        <span className="ml-auto text-sm font-medium text-neutral-text/50 bg-neutral-bg px-3 py-1 rounded-full">
+                            Durée : {service.duration}
+                        </span>
+                    </div>
+
+                    {/* Affichage des Packs s'il y en a */}
+                    {packs.length > 0 && (
+                        <div className="space-y-3 mt-4 pt-4 border-t border-gray-100">
+                            <h4 className="text-sm font-bold text-neutral-text uppercase tracking-wider mb-2 flex items-center gap-2">
+                                <Tag className="w-4 h-4 text-secondary" /> Formules & Packs
+                            </h4>
+                            <div className="grid gap-3">
+                                {packs.map((pack, i) => (
+                                    <div key={i} className="flex justify-between items-center bg-neutral-bg/50 p-3 rounded-lg hover:bg-secondary/5 transition-colors">
+                                        <span className="font-medium text-neutral-text">{pack.name}</span>
+                                        <div className="text-right">
+                                            <span className="block font-bold text-primary">{pack.price}</span>
+                                            {pack.detail && <span className="block text-[10px] text-gray-500">{pack.detail}</span>}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                </div>
+
                 {/* Liste des bénéfices */}
-                <ul className="space-y-3 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <ul className="space-y-3">
                   {service.benefits.map((benefit, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />

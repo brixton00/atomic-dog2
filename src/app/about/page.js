@@ -130,66 +130,7 @@ export default function About() {
 
       {/* --- SECTION 3 : PARCOURS & FORMATIONS --- */}
       <section className="py-20 px-4 relative">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12 items-start">
-            {/* Texte Parcours */}
-            <div className="flex-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full text-primary font-bold text-sm shadow-sm mb-6 border border-gray-100">
-                <GraduationCap className="h-4 w-4" /> Formation & Expérience
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-text mb-8">
-                Mon parcours professionnel
-              </h2>
-
-              <div className="space-y-8 border-l-2 border-primary/20 pl-8 relative">
-                {/* Item Parcours 1 */}
-                <div className="relative">
-                  <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-primary border-4 border-neutral-bg"></span>
-                  <h3 className="text-xl font-bold text-neutral-text">
-                    Certification Éducateur Comportementaliste
-                  </h3>
-                  <span className="text-sm text-secondary font-semibold">
-                    2023 • Organisme Certifié
-                  </span>
-                  <p className="mt-2 text-neutral-text/70">
-                    Formation intensive théorique et pratique sur la psychologie
-                    canine, les troubles du comportement et les méthodes
-                    d'apprentissage.
-                  </p>
-                </div>
-
-                {/* Item Parcours 2 */}
-                <div className="relative">
-                  <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-neutral-bg border-4 border-primary"></span>
-                  <h3 className="text-xl font-bold text-neutral-text">
-                    Spécialisation "Gestion de la Réactivité"
-                  </h3>
-                  <span className="text-sm text-secondary font-semibold">
-                    2024 • Module Expert
-                  </span>
-                  <p className="mt-2 text-neutral-text/70">
-                    Approfondissement sur la gestion des chiens réactifs
-                    (humains/congénères) et la désensibilisation.
-                  </p>
-                </div>
-
-                {/* Item Parcours 3 */}
-                <div className="relative">
-                  <span className="absolute -left-[41px] top-1 h-5 w-5 rounded-full bg-neutral-bg border-4 border-primary"></span>
-                  <h3 className="text-xl font-bold text-neutral-text">
-                    Formation Secourisme Canin
-                  </h3>
-                  <span className="text-sm text-secondary font-semibold">
-                    2024
-                  </span>
-                  <p className="mt-2 text-neutral-text/70">
-                    Pour assurer la sécurité de vos animaux en toutes
-                    circonstances lors des balades et gardes.
-                  </p>
-                </div>
-              </div>
-            </div>
-
+        {/* TODO : parcours pro & formations */}
             {/* Image d'illustration (Action) */}
             <div className="w-full md:w-1/3 relative h-[500px] rounded-3xl overflow-hidden shadow-xl rotate-3 md:mt-12">
               <Image
@@ -199,8 +140,6 @@ export default function About() {
                 className="object-cover"
               />
             </div>
-          </div>
-        </div>
       </section>
 
       {/* --- SECTION 4 : CITATION & CTA --- */}
