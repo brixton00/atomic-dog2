@@ -9,6 +9,8 @@ import {
   Map,
   TrendingUp,
   ArrowRight,
+  ShieldCheck, // Ajout pour le "Cadre"
+  Lightbulb,   // Ajout pour "L'Intelligence"
 } from "lucide-react";
 
 export default function MethodPage() {
@@ -43,12 +45,27 @@ export default function MethodPage() {
                 l'animal, mais à obtenir sa{" "}
                 <strong>coopération volontaire</strong>.
               </p>
-              <p className="text-neutral-text/80 leading-relaxed">
+              <p className="text-neutral-text/80 leading-relaxed mb-6">
                 Concrètement, nous renforçons les bons comportements
                 (récompenses, jeux, félicitations) pour qu'ils se répètent, et
                 nous gérons l'environnement pour éviter les erreurs, sans jamais
                 utiliser la peur ou la douleur.
               </p>
+
+              {/* AJOUT : Nuance sur le cadre structurant */}
+              <div className="bg-neutral-bg/50 p-4 rounded-xl border border-secondary/20 flex gap-3 items-start">
+                <ShieldCheck className="text-secondary h-6 w-6 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="font-bold text-neutral-text text-sm mb-1">
+                    Un Cadre Structurant
+                  </h3>
+                  <p className="text-sm text-neutral-text/80 leading-relaxed">
+                    Bienveillance ne signifie pas laxisme. Je travaille avec un <strong>cadre clair et cohérent</strong>. 
+                    Les règles et les limites sont indispensables pour que votre chien se sente en sécurité. 
+                    Mon rôle est de vous aider à poser ce cadre structurant, mais toujours de manière juste et explicable au chien.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="bg-white p-8 rounded-3xl shadow-sm border-l-4 border-primary">
@@ -61,7 +78,7 @@ export default function MethodPage() {
                 l'éthologie (l'étude du comportement) et de la psychologie
                 comportementale.
               </p>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-4 space-y-4">
                 <li className="flex gap-3">
                   <Brain className="text-primary h-6 w-6 flex-shrink-0" />
                   <span className="text-neutral-text/90">
@@ -76,6 +93,16 @@ export default function MethodPage() {
                     <strong>Respect de l'individualité :</strong> Chaque chien a
                     ses propres motivations, ses peurs et son seuil de
                     tolérance. Pas de "recette magique", mais du sur-mesure.
+                  </span>
+                </li>
+                
+                {/* AJOUT : L'intelligence comme moteur */}
+                <li className="flex gap-3 bg-primary/5 p-3 rounded-lg -mx-3">
+                  <Lightbulb className="text-primary h-6 w-6 flex-shrink-0" />
+                  <span className="text-neutral-text/90">
+                    <strong>L'Intelligence comme Moteur :</strong> Votre chien est un être doué de capacités cognitives exceptionnelles. 
+                    Plutôt que d'utiliser la contrainte ou des outils coercitifs, nous stimulons son intelligence. 
+                    C'est sa capacité à réfléchir et à comprendre qui génère une progression durable.
                   </span>
                 </li>
               </ul>

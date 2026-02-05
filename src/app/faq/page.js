@@ -14,40 +14,50 @@ export default function FAQ() {
 
   const faqData = [
     {
-      question: "À quel âge peut-on commencer l'éducation d'un chiot ?",
+      question: "Qu'est-ce qu'un éducateur canin et à quoi ça sert ?",
       answer:
-        "Dès son arrivée à la maison (généralement 2 mois) ! Contrairement aux idées reçues, il ne faut pas attendre 6 mois. Plus on commence tôt, plus on évite les mauvais comportements. L'école du chiot est spécialement conçue pour les apprentissages précoces (propreté, mordillements, solitude).",
+        "C'est un spécialiste de la relation Homme-Chien. Mon rôle n'est pas de simplement « dresser » votre animal, mais de vous fournir les outils pour le comprendre et communiquer clairement avec lui. Cela sert à établir des règles de vie saines, à résoudre des problèmes du quotidien (propreté, destruction, solitude) et à garantir la sécurité et le bien-être de tous.",
     },
     {
-      question: "Combien de temps dure un bilan comportemental ?",
+      question: "Qu'est-ce que cela peut m'apporter ?",
       answer:
-        "Le bilan dure généralement entre 1h30 et 2h. C'est un entretien approfondi qui se déroule à votre domicile pour observer le chien dans son environnement habituel. Cela nous permet d'établir un diagnostic précis et un plan de travail personnalisé.",
+        "Au-delà de l'obéissance pure, cela vous apporte de la sérénité. Vous apprendrez à décrypter les signaux de votre chien, à prévenir les conflits et à renforcer votre complicité. C'est un investissement pour construire une relation harmonieuse qui durera 10 ou 15 ans.",
     },
     {
-      question: "Quelle est votre méthode de travail ?",
+      question: "À qui cela s'adresse-t-il ?",
       answer:
-        "J'utilise exclusivement des méthodes positives et bienveillantes. Cela signifie que nous renforçons les bons comportements (récompenses, jeu, caresses) au lieu de punir les mauvais. Nous n'utilisons aucun outil coercitif (collier étrangleur, électrique, etc.). L'objectif est la coopération, pas la soumission.",
+        "À tout le monde ! Aux propriétaires de chiots qui veulent partir sur de bonnes bases, aux familles rencontrant des difficultés avec un chien adulte, ou simplement aux passionnés qui veulent approfondir leur lien. Il n'y a pas de « mauvais maître », il n'y a que des binômes qui ont besoin d'ajustements.",
+    },
+    {
+      question: "Quand faire appel à un éducateur canin ?",
+      answer:
+        "L'idéal est la prévention : dès l'arrivée du chiot ou avant même une adoption. Cependant, il faut consulter dès l'apparition d'un comportement gênant (agressivité, peur, aboiements excessifs). N'attendez pas que la situation s'envenime ; il est toujours plus facile de prévenir que de guérir.",
     },
     {
       question:
-        "Mon chien est agressif avec ses congénères, pouvez-vous m'aider ?",
+        "Est-il encore possible de changer le comportement de mon chien (malgré son âge/passé) ?",
       answer:
-        "Oui, la réactivité congénères est un motif fréquent de consultation. Nous travaillerons d'abord sur la gestion de l'environnement et les distances de confort, puis nous mettrons en place des protocoles de désensibilisation. Attention, pour les cas de morsure grave sur humain, merci de me le préciser dès le premier contact.",
+        "OUI, absolument. Le cerveau du chien reste plastique toute sa vie. Qu'il ait 5 ans, 10 ans, ou un passé lourd (refuge, maltraitance), on peut toujours modifier des comportements et apaiser des émotions. Cela demande parfois plus de patience qu'avec un chiot, mais les progrès sont toujours possibles.",
     },
     {
-      question: "Proposez-vous des facilités de paiement ?",
+      question: "Quelles méthodes utilisez-vous ?",
       answer:
-        "Oui, pour les forfaits (École du Chiot, Éducation Adulte), il est possible de régler en 2 ou 3 fois sans frais. Le bilan comportemental est quant à lui à régler à la fin de la séance.",
+        "Je travaille exclusivement avec des méthodes positives et bienveillantes, basées sur les sciences comportementales (éthologie). Nous utilisons la motivation du chien (jeu, récompenses) pour renforcer les bons comportements. Je refuse tout outil coercitif (collier étrangleur, électrique) ou violence physique/psychologique.",
     },
     {
       question: "Où se déroulent les séances ?",
       answer:
-        "Le bilan et les premières leçons se déroulent généralement à votre domicile (Paris & Banlieue proche). Ensuite, selon les besoins du chien, nous pourrons travailler en extérieur (parc, ville, forêt) pour travailler avec des distractions réelles.",
+        "Le Bilan Comportemental (1ère séance) se déroule obligatoirement à votre domicile pour observer le chien dans son environnement réel. Les séances de suivi peuvent ensuite avoir lieu à domicile ou en extérieur (parc, ville, forêt) selon les problématiques à travailler (marche en laisse, rappel, congénères).",
     },
     {
-      question: "Que faire si je dois annuler un rendez-vous ?",
+      question: "Comment solliciter une première séance ?",
       answer:
-        "Tout rendez-vous peut être annulé ou déplacé sans frais jusqu'à 24h à l'avance. En deçà de ce délai, la séance sera considérée comme due, sauf cas de force majeure (sur présentation de justificatif).",
+        "Vous pouvez me contacter via le formulaire du site ou par téléphone. Nous conviendrons ensemble d'un rendez-vous pour effectuer un Bilan Comportemental (durée 1h30 à 2h). C'est l'étape indispensable pour que je puisse analyser la situation et vous proposer un plan de travail sur-mesure.",
+    },
+    {
+      question: "Proposez-vous des facilités de paiement ?",
+      answer:
+        "Oui. Le bilan comportemental est à régler le jour même de la séance. En revanche, pour les forfaits d'éducation ou de rééducation, vous avez la possibilité de régler en 2 fois sans frais pour étaler la dépense.",
     },
   ];
 
@@ -64,8 +74,7 @@ export default function FAQ() {
             Questions Fréquentes
           </h1>
           <p className="text-primary-light text-xl">
-            Vous avez des interrogations sur mes méthodes ou mes services ? Les
-            réponses se trouvent probablement ici.
+            Comprendre mon métier, mes méthodes et le déroulement des séances.
           </p>
         </div>
       </section>
@@ -91,8 +100,8 @@ export default function FAQ() {
           Vous n'avez pas trouvé votre réponse ?
         </h2>
         <p className="text-neutral-text/70 mb-8">
-          N'hésitez pas à me contacter directement, je serai ravie de vous
-          renseigner.
+          Chaque situation est unique. N'hésitez pas à me contacter pour en
+          discuter de vive voix.
         </p>
         <Link
           href="/contact"

@@ -116,9 +116,9 @@ export const servicesData = [
     id: "troubles",
     title: "Modification de Comportement",
     shortDesc:
-      "Gestion de la réactivité, anxiété, agressivité. Travail sur mesure.",
+      "Gestion de la réactivité, agressivité, anxiété, destruction... Solutions aux problèmes complexes.",
     fullDesc:
-      "Analyse et correction des comportements problématiques (agressivité, peurs, destruction...). Un travail en profondeur pour rétablir l'harmonie.",
+      "Une expertise ciblée pour résoudre tous les troubles du comportement que peut vivre votre chien.",
     pricing: {
       unit: "60 €",
       unitDetail: "/ séance",
@@ -134,10 +134,13 @@ export const servicesData = [
     href: "/services#troubles",
     image: "/assets/images/storm.jpg",
     benefits: [
-      "Plan de correction personnalisé (Agressivité, Peur...)",
-      "Stratégies relation maître-chien & Gestion du stress",
-      "Suivi constant & Corrections WhatsApp 7j/7",
-      "Compte rendu détaillé (Progression, Exercices)",
+      "Gestion de la réactivité (laisse, congènères, humains, vélos/joggeurs etc.)",
+      "Agressivité",
+      "Anxiété de séparation & destruction matérielle",
+      "Protection de ressources",
+      "Peurs et phobies",
+      "hyper-attachement ou aboiements excessifs",
+      "Suivi quotidien & Gestion émotionnelle",
     ],
   },
   {

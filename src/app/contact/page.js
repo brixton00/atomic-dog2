@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-// import Link from "next/link"; 
 import dynamic from "next/dynamic";
-import Image from "next/image"; 
 import {
   Mail,
   Phone,
@@ -13,12 +11,15 @@ import {
   CheckCircle,
   Instagram,
   ArrowUpRight,
-  Info // Ajout de l'icône Info pour l'encart déplacé
+  Info,
+  User,
+  Dog,
+  Map
 } from "lucide-react";
 
 // 🛡️ IMPORT DYNAMIQUE : Charge la carte uniquement côté client
 const InterventionMap = dynamic(
-  () => import("@/components/ui/interventionMap"), // Attention à la casse du nom de fichier (InterventionMap vs interventionMap)
+  () => import("@/components/ui/interventionMap"),
   { 
     loading: () => <div className="h-64 w-full bg-neutral-200 animate-pulse rounded-2xl flex items-center justify-center text-neutral-500 text-sm">Chargement de la carte...</div>,
     ssr: false 
@@ -26,11 +27,7 @@ const InterventionMap = dynamic(
 );
 
 // --- CONFIGURATION INSTAGRAM ---
-// ⚠️ Collez ici l'URL JSON fournie par un service tiers (ex: Behold.so)
-// Si vide, le site utilisera les images de secours ci-dessous.
 const INSTAGRAM_FEED_URL = ""; 
-
-// Images de secours (Fallback) si l'API ne répond pas ou n'est pas configurée
 const FALLBACK_POSTS = [
   "/assets/images/443719459_949572787176611_7232919707611566629_n.jpg",
   "/assets/images/480884701_933148905688266_2285257989744581531_n.jpg",
@@ -42,31 +39,25 @@ const FALLBACK_POSTS = [
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState("idle");
-  // État pour stocker les posts (vrais ou fallback)
   const [instaPosts, setInstaPosts] = useState(FALLBACK_POSTS);
 
   // 1. Logique de récupération des VRAIS posts
   useEffect(() => {
     async function fetchInstagram() {
-      if (!INSTAGRAM_FEED_URL) return; // Si pas d'URL configurée, on garde les fallbacks
+      if (!INSTAGRAM_FEED_URL) return;
 
       try {
         const response = await fetch(INSTAGRAM_FEED_URL);
         if (!response.ok) throw new Error("Erreur fetch Instagram");
         
         const data = await response.json();
-        
-        // Adaptation selon le format reçu (exemple générique compatible Behold.so)
-        // On s'assure de ne récupérer que les URLs des images
         const cleanPosts = data.map(post => post.mediaUrl || post.media_url || post.imageUrl);
         
-        // On ne met à jour que si on a trouvé des images valides
         if (cleanPosts.length > 0) {
           setInstaPosts(cleanPosts);
         }
       } catch (error) {
         console.warn("Impossible de charger le flux Instagram réel, utilisation du fallback.", error);
-        // On ne fait rien, l'état initial (FALLBACK_POSTS) reste actif
       }
     }
 
@@ -76,6 +67,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormStatus("submitting");
+    // Simulation d'envoi
     setTimeout(() => {
       setFormStatus("success");
     }, 1500);
@@ -92,7 +84,7 @@ export default function Contact() {
         .animate-scroll {
           display: flex;
           width: max-content;
-          animation: scroll 30s linear infinite; /* Ralenti un peu pour la lisibilité (20s -> 30s) */
+          animation: scroll 30s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
@@ -108,7 +100,7 @@ export default function Contact() {
           </h1>
           <p className="text-primary-light text-xl">
             Une question ? Un problème de comportement ? Remplissez ce
-            formulaire ou contactez-moi directement pour une première approche.
+            formulaire complet pour que je puisse analyser votre situation.
           </p>
         </div>
       </section>
@@ -204,7 +196,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* --- MODULE INSTAGRAM (Vrais posts via useEffect) --- */}
+          {/* --- MODULE INSTAGRAM --- */}
           <div className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] p-[2px] rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div className="bg-white rounded-[22px] overflow-hidden">
                 <div className="p-6 border-b border-gray-100 flex justify-between items-center">
@@ -222,14 +214,10 @@ export default function Contact() {
                     </a>
                 </div>
                 
-                {/* Zone de défilement automatique */}
                 <div className="py-6 overflow-hidden relative">
                     <div className="animate-scroll flex gap-4 px-4">
-                        {/* On boucle sur instaPosts (qui contient soit les vrais, soit les fallbacks) */}
                         {[...instaPosts, ...instaPosts].map((src, i) => (
                             <div key={i} className="relative h-32 w-32 shrink-0 rounded-xl overflow-hidden shadow-sm border border-gray-100 group">
-                                {/* Attention: Si src est une URL externe, il faut configurer next.config.mjs pour autoriser le domaine (ex: scontent.cdninstagram.com) */}
-                                {/* Sinon, utiliser <img /> standard au lieu de <Image /> pour éviter les erreurs Next.js Image Optimization */}
                                 <img 
                                     src={src} 
                                     alt="Instagram post" 
@@ -242,14 +230,12 @@ export default function Contact() {
                 </div>
             </div>
           </div>
-
-          {/* L'encart "Pourquoi demander un bilan ?" a été déplacé à droite ! */}
         </div>
 
         {/* --- COLONNE DROITE : Info Bilan + Formulaire --- */}
-        <div className="flex flex-col gap-6"> {/* Ajout d'un conteneur flex pour espacer l'encart du formulaire */}
+        <div className="flex flex-col gap-6">
           
-          {/* --- 2. ENCART DÉPLACÉ ICI --- */}
+          {/* Encart Info */}
           <div className="bg-neutral-bg border-l-4 border-primary p-6 rounded-r-2xl shadow-sm">
             <div className="flex items-start gap-4">
               <div className="bg-primary/10 p-2 rounded-full text-primary mt-1">
@@ -268,7 +254,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* --- FORMULAIRE --- */}
+          {/* --- FORMULAIRE COMPLET --- */}
           <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden h-fit">
             {formStatus === "success" ? (
               <div className="absolute inset-0 bg-white z-10 flex flex-col items-center justify-center text-center p-8 animate-in fade-in zoom-in duration-300">
@@ -295,116 +281,113 @@ export default function Contact() {
               Envoyez-moi un message
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Nom & Prénom */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="firstname"
-                    className="text-sm font-bold text-neutral-text/80"
-                  >
-                    Prénom
-                  </label>
-                  <input
-                    type="text"
-                    id="firstname"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="Votre prénom"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="lastname"
-                    className="text-sm font-bold text-neutral-text/80"
-                  >
-                    Nom
-                  </label>
-                  <input
-                    type="text"
-                    id="lastname"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="Votre nom"
-                  />
-                </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {/* SECTION 1: VOUS (Humain) */}
+              <div className="space-y-4">
+                  <div className="flex items-center gap-2 mb-2">
+                      <User className="h-4 w-4 text-secondary" />
+                      <h3 className="text-sm font-bold text-secondary uppercase tracking-wider">Vos Informations</h3>
+                  </div>
+                  
+                  {/* Nom & Prénom */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="firstname" className="text-xs font-bold text-neutral-text/70">Prénom *</label>
+                      <input type="text" id="firstname" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Votre prénom" />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="lastname" className="text-xs font-bold text-neutral-text/70">Nom *</label>
+                      <input type="text" id="lastname" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Votre nom" />
+                    </div>
+                  </div>
+
+                   {/* Ville (NOUVEAU) */}
+                  <div className="space-y-2">
+                      <label htmlFor="city" className="text-xs font-bold text-neutral-text/70">Ville de résidence *</label>
+                      <div className="relative">
+                        <Map className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                        <input type="text" id="city" required className="w-full pl-10 pr-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Ex: Logroño" />
+                      </div>
+                  </div>
               </div>
 
-              {/* Email & Tel */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="space-y-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-bold text-neutral-text/80"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="exemple@mail.com"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-bold text-neutral-text/80"
-                  >
-                    Téléphone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
-                    placeholder="06 00 00 00 00"
-                  />
-                </div>
+              {/* SECTION 2: LE CHIEN (NOUVEAU) */}
+              <div className="space-y-4 pt-2 border-t border-dashed border-gray-100">
+                  <div className="flex items-center gap-2 mb-2 pt-2">
+                      <Dog className="h-4 w-4 text-secondary" />
+                      <h3 className="text-sm font-bold text-secondary uppercase tracking-wider">Votre Chien</h3>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      {/* Prénom Chien */}
+                      <div className="space-y-2 md:col-span-1">
+                          <label htmlFor="dogName" className="text-xs font-bold text-neutral-text/70">Son Nom *</label>
+                          <input type="text" id="dogName" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="Médor" />
+                      </div>
+                      
+                      {/* Âge */}
+                      <div className="space-y-2 md:col-span-1">
+                          <label htmlFor="dogAge" className="text-xs font-bold text-neutral-text/70">Âge *</label>
+                          <input type="text" id="dogAge" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="ex: 2 ans" />
+                      </div>
+
+                      {/* Race */}
+                      <div className="space-y-2 md:col-span-1">
+                          <label htmlFor="dogBreed" className="text-xs font-bold text-neutral-text/70">Race / Type *</label>
+                          <input type="text" id="dogBreed" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="ex: Labrador" />
+                      </div>
+                  </div>
               </div>
 
-              {/* Sujet (Select) */}
-              <div className="space-y-2">
-                <label
-                  htmlFor="service"
-                  className="text-sm font-bold text-neutral-text/80"
-                >
-                  Je suis intéressé(e) par...
-                </label>
-                <select
-                  id="service"
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none cursor-pointer"
-                >
-                  <option value="bilan">Bilan Comportemental (Recommandé)</option>
-                  <option value="chiot">École du Chiot</option>
-                  <option value="education">Éducation Adulte</option>
-                  <option value="balade">Balades Éducatives</option>
-                  <option value="autre">Autre demande</option>
-                </select>
-              </div>
+              {/* SECTION 3: CONTACT & MESSAGE */}
+              <div className="space-y-4 pt-2 border-t border-dashed border-gray-100">
+                 <div className="flex items-center gap-2 mb-2 pt-2">
+                      <Mail className="h-4 w-4 text-secondary" />
+                      <h3 className="text-sm font-bold text-secondary uppercase tracking-wider">Contact & Demande</h3>
+                  </div>
 
-              {/* Message */}
-              <div className="space-y-2">
-                <label
-                  htmlFor="message"
-                  className="text-sm font-bold text-neutral-text/80"
-                >
-                  Votre message
-                </label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
-                  placeholder="Racontez-moi brièvement les difficultés que vous rencontrez avec votre chien..."
-                ></textarea>
+                  {/* Email & Tel */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-xs font-bold text-neutral-text/70">Email *</label>
+                      <input type="email" id="email" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="exemple@mail.com" />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="text-xs font-bold text-neutral-text/70">Téléphone *</label>
+                      <input type="tel" id="phone" required className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all" placeholder="06 00 00 00 00" />
+                    </div>
+                  </div>
+
+                  {/* Sujet (Select) */}
+                  <div className="space-y-2">
+                    <label htmlFor="service" className="text-xs font-bold text-neutral-text/70">Je suis intéressé(e) par...</label>
+                    <select id="service" className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none cursor-pointer">
+                      <option value="bilan">Bilan Comportemental (Recommandé)</option>
+                      <option value="chiot">École du Chiot</option>
+                      <option value="education">Éducation Adulte</option>
+                      <option value="balade">Balades Éducatives</option>
+                      <option value="autre">Autre demande</option>
+                    </select>
+                  </div>
+
+                  {/* Message */}
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-xs font-bold text-neutral-text/70">Votre message</label>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      className="w-full px-4 py-3 rounded-xl bg-neutral-bg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
+                      placeholder="Racontez-moi brièvement les difficultés que vous rencontrez avec votre chien..."
+                    ></textarea>
+                  </div>
               </div>
 
               {/* Bouton Submit */}
               <button
                 type="submit"
                 disabled={formStatus === "submitting"}
-                className="w-full bg-primary hover:bg-primary-light text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="w-full bg-primary hover:bg-primary-light text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
               >
                 {formStatus === "submitting" ? (
                   "Envoi en cours..."
