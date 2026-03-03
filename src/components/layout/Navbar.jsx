@@ -2,27 +2,49 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Nouveau hook pour l'état actif
-import { Menu, X, PawPrint } from "lucide-react";
+import { usePathname } from "next/navigation";
+// Ajout de l'icône Globe pour le bouton des langues
+import { Menu, X, PawPrint, Globe } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // Permet de savoir sur quelle page on est
+  // Nouvel état pour gérer l'ouverture du menu déroulant des langues
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  // État simulant la langue active (à relier plus tard au vrai système i18n)
+  const [currentLang, setCurrentLang] = useState("FR");
 
-  const closeMenu = () => setIsOpen(false);
+  const pathname = usePathname();
 
-  // Liste mise à jour selon l'avancement du projet
+  const closeMenu = () => {
+    setIsOpen(false);
+    setIsLangOpen(false); // On ferme aussi le menu des langues par sécurité
+  };
+
   const navLinks = [
     { name: "Accueil", href: "/" },
     { name: "Qui suis-je ?", href: "/about" },
-    { name: "Méthode", href: "/method" }, // Cette page reste à créer
-    { name: "Services & Tarifs", href: "/services" }, // Fusionné
-    { name: "FAQ", href: "/faq" }, // Ajouté
+    { name: "Méthode", href: "/method" },
+    { name: "Services & Tarifs", href: "/services" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
-  // Fonction utilitaire pour vérifier si le lien est actif
+  // Liste des langues disponibles pour éviter la duplication de code (Clean Code)
+  const languages = [
+    { code: "ES", label: "Español" },
+    { code: "EN", label: "English" },
+    { code: "FR", label: "Français" },
+  ];
+
   const isActive = (path) => pathname === path;
+
+  // Fonction pour gérer le changement de langue
+  const changeLanguage = (langCode) => {
+    setCurrentLang(langCode);
+    setIsLangOpen(false);
+    // TODO: Implémenter la logique de redirection de Next.js i18n ici plus tard
+    console.log(`Changement de langue vers : ${langCode}`);
+  };
 
   return (
     <nav className="bg-neutral-bg/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
@@ -42,7 +64,7 @@ export default function Navbar() {
           </Link>
 
           {/* MENU DESKTOP */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -57,6 +79,35 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+
+            {/* SÉLECTEUR DE LANGUE DESKTOP */}
+            <div className="relative ml-4">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-1 text-sm font-bold text-neutral-text/70 hover:text-primary transition-colors focus:outline-none"
+                aria-label="Changer de langue"
+              >
+                <Globe className="h-5 w-5" />
+                <span>{currentLang}</span>
+              </button>
+
+              {/* Menu déroulant absolu */}
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white border border-gray-100 rounded-lg shadow-lg py-1 z-50">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`block w-full text-left px-4 py-2 text-sm transition-colors
+                        ${currentLang === lang.code ? "bg-primary/10 text-primary font-bold" : "text-gray-700 hover:bg-gray-50 hover:text-primary"}
+                      `}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* BOUTON BURGER MOBILE */}
@@ -76,7 +127,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MENU MOBILE (Full width) */}
+      {/* MENU MOBILE */}
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg animate-in slide-in-from-top-5 duration-200">
           <div className="px-4 pt-4 pb-6 space-y-2 flex flex-col items-center">
@@ -95,11 +146,26 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            {/* CTA Mobile supplémentaire */}
+
+            {/* SÉLECTEUR DE LANGUE MOBILE */}
+            <div className="w-full pt-4 mt-2 border-t border-gray-100 flex justify-center gap-4">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => changeLanguage(lang.code)}
+                  className={`px-4 py-2 rounded-lg font-bold transition-colors
+                    ${currentLang === lang.code ? "bg-primary text-white" : "bg-gray-100 text-neutral-text hover:bg-gray-200"}
+                  `}
+                >
+                  {lang.code}
+                </button>
+              ))}
+            </div>
+
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="mt-4 w-full bg-secondary text-white font-bold py-3 rounded-xl text-center shadow-md active:scale-95 transition-transform"
+              className="mt-6 w-full bg-secondary text-white font-bold py-3 rounded-xl text-center shadow-md active:scale-95 transition-transform"
             >
               Prendre rendez-vous
             </Link>
