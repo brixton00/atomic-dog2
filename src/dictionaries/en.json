@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About Me",
+      "method": "Methodology",
+      "services": "Services & Pricing",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "actions": {
+      "book": "Book a Session"
+    },
+    "accessibility": {
+      "changeLanguage": "Change language",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    }
+  }
+}

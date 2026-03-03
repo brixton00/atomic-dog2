@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "links": {
+      "home": "Accueil",
+      "about": "Qui suis-je ?",
+      "method": "Méthode",
+      "services": "Services & Tarifs",
+      "faq": "FAQ",
+      "contact": "Contact"
+    },
+    "actions": {
+      "book": "Prendre rendez-vous"
+    },
+    "accessibility": {
+      "changeLanguage": "Changer de langue",
+      "openMenu": "Ouvrir le menu",
+      "closeMenu": "Fermer le menu"
+    }
+  }
+}

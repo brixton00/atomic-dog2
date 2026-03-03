@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 // Fusion des imports d'icônes nécessaires pour les deux codes
-import { ArrowRight, MessageCircle, CheckCircle2, MapPin, Star } from "lucide-react";
+import {
+  ArrowRight,
+  MessageCircle,
+  CheckCircle2,
+  MapPin,
+  Star,
+} from "lucide-react";
 // Assurez-vous que ces chemins sont corrects dans votre projet
 import ServiceCard from "@/components/cards/serviceCard";
 import { servicesData } from "@/data/services";
@@ -12,7 +18,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col w-full bg-neutral-bg min-h-screen">
-      
       {/* --- 1. HERO SECTION HYBRIDE --- */}
       {/* Structure grand format du Code 2 + Contenu du Code 1 */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
@@ -30,7 +35,7 @@ export default function Home() {
         {/* Contenu central (issu du Code 1, adapté en blanc) */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto flex flex-col items-center">
           <span className="inline-block py-1.5 px-4 rounded-full bg-secondary/90 text-white font-bold text-xs md:text-sm tracking-wider uppercase mb-6 shadow-md">
-             Éducation Canine Positive & Bienveillante
+            Éducation Canine Positive & Bienveillante
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
             Une relation de confiance avec votre{" "}
@@ -60,19 +65,18 @@ export default function Home() {
 
         {/* Badge flottant "Méthode Positive" (issu du Code 1, intégré dans le Hero) */}
         <div className="absolute bottom-32 right-4 md:right-8 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl max-w-[280px] md:max-w-xs z-20 hidden sm:block animate-in fade-in slide-in-from-bottom-4 duration-1000">
-            <div className="flex items-center gap-3 mb-2">
+          <div className="flex items-center gap-3 mb-2">
             <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse" />
             <p className="text-sm font-bold text-neutral-text">
-                Méthode 100% Positive
+              Méthode 100% Positive
             </p>
-            </div>
-            <p className="text-xs text-gray-600 leading-snug">
+          </div>
+          <p className="text-xs text-gray-600 leading-snug">
             Respect du bien-être physique et émotionnel de l'animal. Zéro
             coercition.
-            </p>
+          </p>
         </div>
       </section>
-
 
       {/* --- 2. SECTION SERVICES DYNAMIQUES (Issu du Code 1) --- */}
       <section className="bg-white py-24 px-4 relative z-10 rounded-t-[3rem] -mt-10 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
@@ -105,7 +109,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* --- 3. PRÉSENTATION (Issu du Code 2) --- */}
       <section className="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
@@ -121,50 +124,63 @@ export default function Home() {
             Bienvenue chez Atomic Dog
           </h2>
           <p className="text-lg text-neutral-text/80 leading-relaxed">
-            Je suis éducatrice comportementaliste passionnée. Mon objectif n'est pas de dresser votre chien, mais de vous apprendre à le comprendre.
+            Je suis éducatrice comportementaliste passionnée. Mon objectif n'est
+            pas de dresser votre chien, mais de vous apprendre à le comprendre.
           </p>
           <p className="text-lg text-neutral-text/80 leading-relaxed">
-            Fini les méthodes coercitives. Ici, on travaille avec la motivation, le jeu et le respect des besoins de l'animal pour des résultats durables au quotidien.
+            Fini les méthodes coercitives. Ici, on travaille avec la motivation,
+            le jeu et le respect des besoins de l'animal pour des résultats
+            durables au quotidien.
           </p>
-          <Link href="/about" className="text-primary font-bold hover:underline underline-offset-4 inline-flex items-center gap-2 text-lg">
+          <Link
+            href="/about"
+            className="text-primary font-bold hover:underline underline-offset-4 inline-flex items-center gap-2 text-lg"
+          >
             En savoir plus sur moi <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
       </section>
-
 
       {/* --- 4. FOCUS BILAN (Issu du Code 2) --- */}
       <section className="bg-primary py-20 px-4 text-white my-12 rounded-3xl mx-4 shadow-2xl">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 space-y-8 order-2 md:order-1">
             <div>
-                <div className="inline-block bg-secondary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
+              <div className="inline-block bg-secondary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-4 shadow-sm">
                 Étape Obligatoire
-                </div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Le Bilan Comportemental
-                </h2>
-                <p className="text-primary-light text-xl leading-relaxed">
-                Avant tout cours, nous devons nous rencontrer. Ce rendez-vous de 2h à votre domicile permet d'analyser l'environnement et de définir un plan d'action sur mesure.
-                </p>
+              </h2>
+              <p className="text-primary-light text-xl leading-relaxed">
+                Avant tout cours, nous devons nous rencontrer. Ce rendez-vous de
+                2h à votre domicile permet d'analyser l'environnement et de
+                définir un plan d'action sur mesure.
+              </p>
             </div>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 bg-primary-light/10 p-3 rounded-xl">
                 <CheckCircle2 className="text-secondary h-7 w-7 flex-shrink-0" />
-                <span className="text-lg font-medium">Analyse complète du comportement</span>
+                <span className="text-lg font-medium">
+                  Analyse complète du comportement
+                </span>
               </li>
               <li className="flex items-center gap-3 bg-primary-light/10 p-3 rounded-xl">
                 <CheckCircle2 className="text-secondary h-7 w-7 flex-shrink-0" />
-                <span className="text-lg font-medium">Identification des causes profondes</span>
+                <span className="text-lg font-medium">
+                  Identification des causes profondes
+                </span>
               </li>
               <li className="flex items-center gap-3 bg-primary-light/10 p-3 rounded-xl">
                 <CheckCircle2 className="text-secondary h-7 w-7 flex-shrink-0" />
-                <span className="text-lg font-medium">Mise en place du protocole de travail</span>
+                <span className="text-lg font-medium">
+                  Mise en place du protocole de travail
+                </span>
               </li>
             </ul>
             <div className="pt-4">
-               <Link 
-                href="/services#bilan" 
+              <Link
+                href="/services#bilan"
                 className="bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-50 transition-all hover:-translate-y-1 shadow-md inline-block text-lg"
               >
                 Tout savoir sur le Bilan
@@ -182,7 +198,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       {/* --- 5. SECTION PHILOSOPHIE (Issu du Code 1) --- */}
       <section className="bg-neutral-bg/50 py-20 px-4">
@@ -215,23 +230,24 @@ export default function Home() {
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0" />
-                  <span className="text-neutral-text font-medium text-lg">{item}</span>
+                  <span className="text-neutral-text font-medium text-lg">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
 
             <div className="pt-6">
-                <Link
+              <Link
                 href="/method"
                 className="inline-block bg-white border-2 border-gray-200 px-8 py-4 rounded-full text-neutral-text font-bold hover:bg-gray-50 hover:border-primary transition-all shadow-sm text-lg"
-                >
+              >
                 Découvrir ma méthode
-                </Link>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* --- CTA FINAL (Version Image de Fond) --- */}
       <section className="relative py-24 px-4 overflow-hidden">
@@ -254,7 +270,8 @@ export default function Home() {
           </h2>
           <p className="text-gray-100 text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-light leading-relaxed drop-shadow-md">
             Le premier pas vers une vie sereine commence par un échange.
-            <br />Discutons de votre chien.
+            <br />
+            Discutons de votre chien.
           </p>
           <Link
             href="/contact"
@@ -264,7 +281,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-
     </div>
   );
 }

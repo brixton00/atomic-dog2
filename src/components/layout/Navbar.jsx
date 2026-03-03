@@ -2,48 +2,59 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-// Ajout de l'icône Globe pour le bouton des langues
+// On importe useRouter pour pouvoir changer d'URL lors du changement de langue
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, PawPrint, Globe } from "lucide-react";
 
-export default function Navbar() {
+// Le composant reçoit le dictionnaire et la locale actuelle en props depuis le Layout serveur
+export default function Navbar({ dict, currentLocale }) {
   const [isOpen, setIsOpen] = useState(false);
-  // Nouvel état pour gérer l'ouverture du menu déroulant des langues
   const [isLangOpen, setIsLangOpen] = useState(false);
-  // État simulant la langue active (à relier plus tard au vrai système i18n)
-  const [currentLang, setCurrentLang] = useState("FR");
 
   const pathname = usePathname();
+  const router = useRouter();
 
   const closeMenu = () => {
     setIsOpen(false);
-    setIsLangOpen(false); // On ferme aussi le menu des langues par sécurité
+    setIsLangOpen(false);
   };
 
+  // Les liens sont générés dynamiquement via le dictionnaire
+  // On préfixe le href avec currentLocale pour rester dans la bonne langue
   const navLinks = [
-    { name: "Accueil", href: "/" },
-    { name: "Qui suis-je ?", href: "/about" },
-    { name: "Méthode", href: "/method" },
-    { name: "Services & Tarifs", href: "/services" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: dict.links.home, href: `/${currentLocale}` },
+    { name: dict.links.about, href: `/${currentLocale}/about` },
+    { name: dict.links.method, href: `/${currentLocale}/method` },
+    { name: dict.links.services, href: `/${currentLocale}/services` },
+    { name: dict.links.faq, href: `/${currentLocale}/faq` },
+    { name: dict.links.contact, href: `/${currentLocale}/contact` },
   ];
 
-  // Liste des langues disponibles pour éviter la duplication de code (Clean Code)
   const languages = [
-    { code: "ES", label: "Español" },
-    { code: "EN", label: "English" },
-    { code: "FR", label: "Français" },
+    { code: "es", label: "Español" },
+    { code: "en", label: "English" },
+    { code: "fr", label: "Français" },
   ];
 
-  const isActive = (path) => pathname === path;
+  // Vérifie si le chemin correspond, en tenant compte du préfixe de langue
+  const isActive = (path) =>
+    pathname === path ||
+    (path !== `/${currentLocale}` && pathname.startsWith(path));
 
-  // Fonction pour gérer le changement de langue
-  const changeLanguage = (langCode) => {
-    setCurrentLang(langCode);
+  // Fonction de redirection Next.js pour le changement de langue
+  const changeLanguage = (newLocale) => {
+    if (!pathname) return;
+
+    // On découpe l'URL (ex: "/fr/about" -> ["", "fr", "about"])
+    const segments = pathname.split("/");
+    // On remplace le segment de la langue par la nouvelle locale choisie
+    segments[1] = newLocale;
+    // On reforme l'URL (ex: "/en/about")
+    const newPath = segments.join("/");
+
     setIsLangOpen(false);
-    // TODO: Implémenter la logique de redirection de Next.js i18n ici plus tard
-    console.log(`Changement de langue vers : ${langCode}`);
+    // On déclenche la navigation
+    router.push(newPath);
   };
 
   return (
@@ -52,7 +63,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           {/* LOGO */}
           <Link
-            href="/"
+            href={`/${currentLocale}`}
             className="flex items-center gap-2 text-primary hover:opacity-80 transition group"
           >
             <div className="bg-primary/10 p-2 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
@@ -84,11 +95,11 @@ export default function Navbar() {
             <div className="relative ml-4">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-1 text-sm font-bold text-neutral-text/70 hover:text-primary transition-colors focus:outline-none"
-                aria-label="Changer de langue"
+                className="flex items-center gap-1 text-sm font-bold text-neutral-text/70 hover:text-primary transition-colors focus:outline-none uppercase"
+                aria-label={dict.accessibility.changeLanguage}
               >
                 <Globe className="h-5 w-5" />
-                <span>{currentLang}</span>
+                <span>{currentLocale}</span>
               </button>
 
               {/* Menu déroulant absolu */}
@@ -99,7 +110,7 @@ export default function Navbar() {
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
                       className={`block w-full text-left px-4 py-2 text-sm transition-colors
-                        ${currentLang === lang.code ? "bg-primary/10 text-primary font-bold" : "text-gray-700 hover:bg-gray-50 hover:text-primary"}
+                        ${currentLocale === lang.code ? "bg-primary/10 text-primary font-bold" : "text-gray-700 hover:bg-gray-50 hover:text-primary"}
                       `}
                     >
                       {lang.label}
@@ -115,7 +126,11 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-neutral-text hover:text-primary focus:outline-none p-2"
-              aria-label="Ouvrir le menu"
+              aria-label={
+                isOpen
+                  ? dict.accessibility.closeMenu
+                  : dict.accessibility.openMenu
+              }
             >
               {isOpen ? (
                 <X className="h-8 w-8" />
@@ -153,8 +168,8 @@ export default function Navbar() {
                 <button
                   key={lang.code}
                   onClick={() => changeLanguage(lang.code)}
-                  className={`px-4 py-2 rounded-lg font-bold transition-colors
-                    ${currentLang === lang.code ? "bg-primary text-white" : "bg-gray-100 text-neutral-text hover:bg-gray-200"}
+                  className={`px-4 py-2 rounded-lg font-bold transition-colors uppercase
+                    ${currentLocale === lang.code ? "bg-primary text-white" : "bg-gray-100 text-neutral-text hover:bg-gray-200"}
                   `}
                 >
                   {lang.code}
@@ -163,11 +178,11 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/contact"
+              href={`/${currentLocale}/contact`}
               onClick={closeMenu}
               className="mt-6 w-full bg-secondary text-white font-bold py-3 rounded-xl text-center shadow-md active:scale-95 transition-transform"
             >
-              Prendre rendez-vous
+              {dict.actions.book}
             </Link>
           </div>
         </div>

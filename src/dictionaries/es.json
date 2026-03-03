@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "links": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "method": "Metodología",
+      "services": "Servicios y Tarifas",
+      "faq": "Preguntas Frecuentes",
+      "contact": "Contacto"
+    },
+    "actions": {
+      "book": "Reservar una Sesión"
+    },
+    "accessibility": {
+      "changeLanguage": "Cambiar idioma",
+      "openMenu": "Abrir menú",
+      "closeMenu": "Cerrar menú"
+    }
+  }
+}
