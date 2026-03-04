@@ -16,5 +16,63 @@
       "openMenu": "Open menu",
       "closeMenu": "Close menu"
     }
+  },
+  "home": {
+    "hero": {
+      "imageAlt": "Positive and compassionate dog training",
+      "badge": "Positive & Compassionate Dog Training",
+      "title1": "A relationship of trust with your",
+      "titleHighlight": "best friend.",
+      "subtitle": "As a certified canine behaviorist, I help you transform daily challenges (reactivity, puppy training, separation anxiety) into moments of bonding.",
+      "ctaBook": "Book a Session",
+      "ctaServices": "View Services",
+      "floatingBadge": {
+        "title": "100% Positive Methodology",
+        "desc": "Respect for the physical and emotional well-being of the animal. Zero coercion."
+      }
+    },
+    "services": {
+      "title": "Customized Training Programs",
+      "subtitle": "Whether you have a puppy to train or an adult dog with behavioral issues, I have the right solution for you.",
+      "viewAll": "View all pricing and details"
+    },
+    "about": {
+      "imageAlt": "Atomic Dog Canine Behaviorist",
+      "title": "Welcome to Atomic Dog",
+      "p1": "I am a passionate canine behaviorist. My goal isn't just to train your dog, but to teach you how to understand them.",
+      "p2": "No more coercive methods. Here, we work with motivation, play, and respect for the animal's needs to achieve lasting everyday results.",
+      "cta": "Learn more about me"
+    },
+    "bilan": {
+      "imageAlt": "Dog behavioral assessment",
+      "badge": "Mandatory First Step",
+      "title": "Behavioral Assessment",
+      "desc": "Before any training sessions, we must meet. This 2-hour home visit allows me to analyze the environment and define a customized action plan.",
+      "points": [
+        "Comprehensive behavioral analysis",
+        "Identification of root causes",
+        "Establishment of a personalized protocol"
+      ],
+      "cta": "Learn all about the Assessment"
+    },
+    "philosophy": {
+      "imageAlt": "Positive reinforcement philosophy",
+      "title": "Why choose positive reinforcement?",
+      "desc": "Moving away from outdated punitive methods, my work is based on the science of learning and canine ethology.",
+      "points": [
+        "Understanding rather than forcing",
+        "Reinforcing good behaviors",
+        "Developing mutual trust",
+        "Lasting and respectful results"
+      ],
+      "cta": "Discover my methodology"
+    },
+    "finalCta": {
+      "imageAlt": "Bonding moment between owner and dog",
+      "title": "Ready to change your daily life?",
+      "desc1": "The first step towards a peaceful life starts with a conversation.",
+      "desc2": "Let's talk about your dog.",
+      "btn": "Contact Me"
+    }
   }
 }

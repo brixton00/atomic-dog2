@@ -2,7 +2,7 @@
   "navbar": {
     "links": {
       "home": "Inicio",
-      "about": "Sobre mí",
+      "about": "Sobre Mí",
       "method": "Metodología",
       "services": "Servicios y Tarifas",
       "faq": "Preguntas Frecuentes",
@@ -15,6 +15,64 @@
       "changeLanguage": "Cambiar idioma",
       "openMenu": "Abrir menú",
       "closeMenu": "Cerrar menú"
+    }
+  },
+  "home": {
+    "hero": {
+      "imageAlt": "Educación canina positiva y respetuosa",
+      "badge": "Educación Canina Positiva y Amable",
+      "title1": "Una relación de confianza con tu",
+      "titleHighlight": "mejor amigo.",
+      "subtitle": "Como educadora y especialista en comportamiento canino certificada, te ayudo a transformar los desafíos diarios (reactividad, cachorros, ansiedad por separación) en momentos de complicidad.",
+      "ctaBook": "Reservar una Sesión",
+      "ctaServices": "Ver Servicios",
+      "floatingBadge": {
+        "title": "Método 100% Positivo",
+        "desc": "Respeto por el bienestar físico y emocional del animal. Cero coerción."
+      }
+    },
+    "services": {
+      "title": "Programas de Entrenamiento Personalizados",
+      "subtitle": "Ya sea que tengas un cachorro para educar o un perro adulto con problemas de comportamiento, tengo la solución adecuada para ti.",
+      "viewAll": "Ver todas las tarifas y detalles"
+    },
+    "about": {
+      "imageAlt": "Educadora canina Atomic Dog",
+      "title": "Bienvenido a Atomic Dog",
+      "p1": "Soy una apasionada educadora y especialista en comportamiento canino. Mi objetivo no es solo adiestrar a tu perro, sino enseñarte a comprenderlo.",
+      "p2": "Se acabaron los métodos coercitivos. Aquí trabajamos con motivación, juego y respeto por las necesidades del animal para lograr resultados duraderos en el día a día.",
+      "cta": "Saber más sobre mí"
+    },
+    "bilan": {
+      "imageAlt": "Evaluación de comportamiento canino",
+      "badge": "Paso Obligatorio",
+      "title": "Evaluación de Comportamiento",
+      "desc": "Antes de cualquier sesión, debemos conocernos. Esta visita a domicilio de 2 horas me permite analizar el entorno y definir un plan de acción a medida.",
+      "points": [
+        "Análisis completo del comportamiento",
+        "Identificación de las causas profundas",
+        "Establecimiento del protocolo de trabajo"
+      ],
+      "cta": "Todo sobre la Evaluación"
+    },
+    "philosophy": {
+      "imageAlt": "Filosofía de educación positiva",
+      "title": "¿Por qué elegir la educación positiva?",
+      "desc": "Lejos de los anticuados métodos punitivos, mi trabajo se basa en la ciencia del aprendizaje y la etología canina.",
+      "points": [
+        "Comprender en lugar de forzar",
+        "Reforzar los buenos comportamientos",
+        "Desarrollar la confianza mutua",
+        "Resultados duraderos y respetuosos"
+      ],
+      "cta": "Descubre mi método"
+    },
+    "finalCta": {
+      "imageAlt": "Complicidad entre dueño y perro",
+      "title": "¿Listo para cambiar tu día a día?",
+      "desc1": "El primer paso hacia una vida tranquila comienza con una conversación.",
+      "desc2": "Hablemos de tu perro.",
+      "btn": "Contáctame"
     }
   }
 }

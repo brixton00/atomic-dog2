@@ -16,5 +16,63 @@
       "openMenu": "Ouvrir le menu",
       "closeMenu": "Fermer le menu"
     }
+  },
+  "home": {
+    "hero": {
+      "imageAlt": "Éducation canine positive et bienveillante",
+      "badge": "Éducation Canine Positive & Bienveillante",
+      "title1": "Une relation de confiance avec votre",
+      "titleHighlight": "meilleur ami.",
+      "subtitle": "Comportementaliste certifiée, je vous accompagne pour transformer les défis du quotidien (réactivité, chiot, solitude) en moments de complicité.",
+      "ctaBook": "Prendre rendez-vous",
+      "ctaServices": "Voir les services",
+      "floatingBadge": {
+        "title": "Méthode 100% Positive",
+        "desc": "Respect du bien-être physique et émotionnel de l'animal. Zéro coercition."
+      }
+    },
+    "services": {
+      "title": "Mes accompagnements sur-mesure",
+      "subtitle": "Que vous ayez un chiot à éduquer ou un chien adulte avec des comportements gênants, j'ai une solution adaptée.",
+      "viewAll": "Voir tous les tarifs et détails"
+    },
+    "about": {
+      "imageAlt": "Éducatrice canine Atomic Dog",
+      "title": "Bienvenue chez Atomic Dog",
+      "p1": "Je suis éducatrice comportementaliste passionnée. Mon objectif n'est pas de dresser votre chien, mais de vous apprendre à le comprendre.",
+      "p2": "Fini les méthodes coercitives. Ici, on travaille avec la motivation, le jeu et le respect des besoins de l'animal pour des résultats durables au quotidien.",
+      "cta": "En savoir plus sur moi"
+    },
+    "bilan": {
+      "imageAlt": "Bilan comportemental chien",
+      "badge": "Étape Obligatoire",
+      "title": "Le Bilan Comportemental",
+      "desc": "Avant tout cours, nous devons nous rencontrer. Ce rendez-vous de 2h à votre domicile permet d'analyser l'environnement et de définir un plan d'action sur mesure.",
+      "points": [
+        "Analyse complète du comportement",
+        "Identification des causes profondes",
+        "Mise en place du protocole de travail"
+      ],
+      "cta": "Tout savoir sur le Bilan"
+    },
+    "philosophy": {
+      "imageAlt": "Philosophie éducation positive",
+      "title": "Pourquoi choisir l'éducation positive ?",
+      "desc": "Loin des méthodes punitives d'antan, je base mon travail sur la science de l'apprentissage et l'éthologie canine.",
+      "points": [
+        "Comprendre plutôt que contraindre",
+        "Renforcer les bons comportements",
+        "Développer la confiance mutuelle",
+        "Résultats durables et respectueux"
+      ],
+      "cta": "Découvrir ma méthode"
+    },
+    "finalCta": {
+      "imageAlt": "Complicité maître et chien",
+      "title": "Prêt à changer votre quotidien ?",
+      "desc1": "Le premier pas vers une vie sereine commence par un échange.",
+      "desc2": "Discutons de votre chien.",
+      "btn": "Contactez-moi"
+    }
   }
 }
