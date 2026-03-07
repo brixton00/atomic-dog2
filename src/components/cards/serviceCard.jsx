@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Tag } from "lucide-react";
 
-export default function ServiceCard({ service }) {
+// NOUVEAU : On ajoute 'dict' aux props du composant
+export default function ServiceCard({ service, dict }) {
   const Icon = service.icon;
 
   // Déterminer le prix à afficher en "Une"
@@ -19,10 +20,10 @@ export default function ServiceCard({ service }) {
           : "bg-white border-transparent hover:shadow-lg hover:-translate-y-1"
       }`}
     >
-      {/* Badge Populaire */}
+      {/* Badge Populaire (Traduit) */}
       {service.isPopular && (
         <span className="absolute top-4 right-4 z-20 bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-          Recommandé
+          {dict.recommended}
         </span>
       )}
 
@@ -41,21 +42,25 @@ export default function ServiceCard({ service }) {
           {service.shortDesc}
         </p>
 
-        {/* NOUVEAU: Affichage des tarifs compact */}
+        {/* Affichage des tarifs compact */}
         <div className="mt-auto pt-4 w-full">
-            <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg">
-                <span>{mainPrice}</span>
-                {service.pricing?.unitDetail && <span className="text-sm font-normal text-gray-500">{service.pricing.unitDetail}</span>}
-            </div>
-            {hasPacks && (
-                <div className="mt-2 flex flex-wrap justify-center gap-2">
-                    {/* On affiche juste un petit badge "Packs dispo" ou les 2 premiers packs pour ne pas surcharger la carte */}
-                    <span className="inline-flex items-center gap-1 text-[10px] bg-secondary/10 text-secondary px-2 py-1 rounded-md font-medium">
-                        <Tag className="w-3 h-3" />
-                        Packs disponibles
-                    </span>
-                </div>
+          <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg">
+            <span>{mainPrice}</span>
+            {service.pricing?.unitDetail && (
+              <span className="text-sm font-normal text-gray-500">
+                {service.pricing.unitDetail}
+              </span>
             )}
+          </div>
+          {hasPacks && (
+            <div className="mt-2 flex flex-wrap justify-center gap-2">
+              {/* Badge Packs disponibles (Traduit) */}
+              <span className="inline-flex items-center gap-1 text-[10px] bg-secondary/10 text-secondary px-2 py-1 rounded-md font-medium">
+                <Tag className="w-3 h-3" />
+                {dict.packsAvailable}
+              </span>
+            </div>
+          )}
         </div>
       </div>
 
@@ -70,13 +75,13 @@ export default function ServiceCard({ service }) {
         />
       </div>
 
-      {/* Partie Inférieure : Action */}
+      {/* Partie Inférieure : Action (Traduit) */}
       <div className="p-4 text-center border-t border-gray-50">
         <Link
           href={service.href}
           className="inline-flex items-center gap-2 text-sm font-bold text-neutral-text hover:text-secondary transition-colors"
         >
-          En savoir plus <ArrowRight className="w-4 h-4" />
+          {dict.learnMore} <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </div>

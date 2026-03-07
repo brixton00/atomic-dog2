@@ -294,5 +294,10 @@
         "Cuidados médicos y medicación si es necesario"
       ]
     }
+  },
+  "serviceCard": {
+    "recommended": "Recomendado",
+    "packsAvailable": "Packs disponibles",
+    "learnMore": "Saber más"
   }
 }

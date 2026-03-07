@@ -294,5 +294,10 @@
         "Medical care and medication if needed"
       ]
     }
+  },
+  "serviceCard": {
+    "recommended": "Recommended",
+    "packsAvailable": "Packs available",
+    "learnMore": "Learn more"
   }
 }

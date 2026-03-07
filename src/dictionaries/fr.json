@@ -294,5 +294,10 @@
         "Soins et médicaments si besoin"
       ]
     }
+  },
+  "serviceCard": {
+    "recommended": "Recommandé",
+    "packsAvailable": "Packs disponibles",
+    "learnMore": "En savoir plus"
   }
 }
