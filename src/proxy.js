@@ -1,4 +1,4 @@
-// src/middleware.js
+// src/proxy.js
 
 import { NextResponse } from "next/server";
 
@@ -7,13 +7,12 @@ const locales = ["fr", "en", "es"];
 // 2. Langue de repli si aucune n'est trouvée ou demandée
 const defaultLocale = "fr";
 
-export function middleware(request) {
+// ⚠️ CHANGEMENT ICI : La fonction s'appelle désormais "proxy" et non plus "middleware"
+export function proxy(request) {
   // On récupère le chemin de l'URL demandée (ex: "/about" ou "/en/contact")
   const { pathname } = request.nextUrl;
 
   // 3. OPTIMISATION DE PERFORMANCE (Crucial pour le jury)
-  // On ne veut PAS que le middleware s'exécute pour les images, le CSS, ou les API.
-  // Cela surchargerait le serveur pour rien.
   if (
     pathname.startsWith("/_next") || // Fichiers internes Next.js
     pathname.includes("/api/") || // Tes routes d'API backend
@@ -39,7 +38,6 @@ export function middleware(request) {
 }
 
 // 6. LE MATCHER (Filtre au niveau du moteur Next.js)
-// Indique à Next.js sur quelles routes déclencher ce fichier middleware
 export const config = {
   matcher: [
     // Expression régulière : on matche TOUTES les routes...

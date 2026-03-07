@@ -8,20 +8,26 @@ import {
   Star,
 } from "lucide-react";
 import ServiceCard from "@/components/cards/serviceCard";
-import { servicesData } from "@/data/services";
 
-// 1. IMPORT DU RÉCUPÉRATEUR DE DICTIONNAIRE
+// 1. CORRECTION DE L'IMPORT : On importe la fonction et non plus le tableau statique
+import { getServicesData } from "@/data/services";
+
+// 2. IMPORT DU RÉCUPÉRATEUR DE DICTIONNAIRE
 import { getDictionary } from "@/dictionaries/dictionaries";
 
-// 2. INJECTION DU PARAMÈTRE LOCALE (Fourni par le routeur dynamique [locale])
 export default async function Home({ params }) {
-  const { locale } = params;
+  // Extraction de la langue actuelle depuis l'URL
+  const { locale } = await params;
 
-  // 3. CHARGEMENT ASYNCHRONE DU DICTIONNAIRE SERVEUR
+  // 3. CHARGEMENT ASYNCHRONE DU DICTIONNAIRE
   const dict = await getDictionary(locale);
 
-  // Données pour la section Services
-  const featuredServices = servicesData.filter((s) => s.isFeatured);
+  // 4. GÉNÉRATION DES DONNÉES DYNAMIQUES
+  // On passe le dictionnaire et la locale à notre fonction pour qu'elle traduise les cartes
+  const allServices = getServicesData(dict, locale);
+
+  // 5. FILTRAGE DES SERVICES À METTRE EN AVANT
+  const featuredServices = allServices.filter((s) => s.isFeatured);
 
   return (
     <div className="flex flex-col w-full bg-neutral-bg min-h-screen">
@@ -30,7 +36,7 @@ export default async function Home({ params }) {
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/images/jay-wennington-CdK2eYhWfQ0-unsplash.jpg"
-            alt={dict.home.hero.imageAlt} // Alt traduit pour le SEO
+            alt={dict.home.hero.imageAlt}
             fill
             className="object-cover brightness-[0.4]"
             priority
@@ -52,7 +58,6 @@ export default async function Home({ params }) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto justify-center">
-            {/* CORRECTION DES LIENS : Injection de la locale courante */}
             <Link
               href={`/${locale}/contact`}
               className="bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 text-lg"
@@ -96,7 +101,7 @@ export default async function Home({ params }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {/* Attention : Les données de 'servicesData' devront aussi être traduites à terme */}
+            {/* On itère sur les services fraîchement traduits */}
             {featuredServices.map((service) => (
               <ServiceCard key={service.id} service={service} locale={locale} />
             ))}

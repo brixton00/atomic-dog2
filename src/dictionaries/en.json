@@ -74,5 +74,225 @@
       "desc2": "Let's talk about your dog.",
       "btn": "Contact Me"
     }
+  },
+  "footer": {
+    "mission": "Canine education and behavior utilizing 100% positive reinforcement. Building trust and mutual respect.",
+    "servicesTitle": "Our Services",
+    "links": {
+      "bilan": "Behavioral Assessment",
+      "chiot": "Puppy School",
+      "education": "Adult Dog Training",
+      "balade": "Group Walks",
+      "faq": "FAQ"
+    },
+    "infoTitle": "Practical Info",
+    "info": {
+      "zoneTitle": "Service Area",
+      "zoneDesc": "Alcanadre, Logroño, Estella-Lizarra, Tafalla, Calahorra, Pamplona, Navarre, La Rioja etc.",
+      "hoursTitle": "Opening Hours",
+      "hoursWeek": "Mon - Fri:",
+      "hoursWeekend": "Sat - Sun:"
+    },
+    "ctaBook": "Book a Session",
+    "rights": "All rights reserved",
+    "legal": {
+      "mentions": "Legal Notice",
+      "cgv": "Terms & Conditions",
+      "privacy": "Privacy Policy"
+    }
+  },
+  "about": {
+    "hero": {
+      "imageAlt": "Portrait of the dog trainer",
+      "badgeLine1": "Passionate &",
+      "badgeLine2": "Certified",
+      "subtitle": "About Me",
+      "title1": "More than a job,",
+      "titleHighlight": "a true calling.",
+      "p1": "Hello! I am a passionate canine behaviorist, dedicated to strengthening the unique bond between every dog and their human.",
+      "p2": "My approach goes far beyond simply \"teaching commands\". My goal is to give you the keys to understand your companion: their needs, emotions, and body language.",
+      "p3": "Moving away from outdated coercive methods, I advocate for 100% positive and compassionate training, based on the latest scientific advances in ethology."
+    },
+    "values": {
+      "title": "My Training Philosophy",
+      "subtitle": "Every dog is an individual. There is no \"magic formula\", but constant adaptation guided by three core pillars.",
+      "val1Title": "Absolute Compassion",
+      "val1Desc": "No violence, physical or psychological. We work with the dog's motivation (toys, treats, praise) to create joyful cooperation.",
+      "val2Title": "Scientific Expertise",
+      "val2Desc": "I continuously educate myself on new discoveries in canine ethology to offer you modern, ethical, and effective solutions.",
+      "val3Title": "Tailor-Made Approach",
+      "val3Desc": "Your life, your environment, and your dog are unique. I adapt each exercise so that it is achievable and relevant in your daily life."
+    },
+    "journey": {
+      "title": "My Background",
+      "desc": "Dog training requires rigorous and continuous education. From my state diploma to behavioral specializations, here are the key steps that forged my expertise and my field methodology.",
+      "imageAlt": "During a training session"
+    },
+    "cta": {
+      "quote": "My goal is not to train a perfect dog, but to help you build a perfect relationship with your dog.",
+      "btn": "Contact me"
+    }
+  },
+  "servicesData": {
+    "bilan": {
+      "title": "Behavioral Assessment",
+      "shortDesc": "The mandatory starting point. A complete analysis of your relationship and environment.",
+      "fullDesc": "Before anything else, I need to understand who your dog is and how you live together. This in-home assessment allows us to identify the root causes of disruptive behaviors.",
+      "pricing": {
+        "unit": "€65",
+        "unitDetail": "/ session",
+        "packs": []
+      },
+      "duration": "1.5h - 2h",
+      "benefits": [
+        "Analysis of the family environment",
+        "Observation of the dog in their daily life",
+        "Definition of training goals",
+        "Implementation of the working protocol"
+      ]
+    },
+    "chiot": {
+      "title": "Puppy School",
+      "shortDesc": "The right foundations: potty training, socialization, and emotional management.",
+      "fullDesc": "The arrival of a puppy is a major life event. I guide you to start on a healthy foundation. Comprehensive package to monitor progress.",
+      "pricing": {
+        "unit": "€45",
+        "unitDetail": "/ session",
+        "packs": [
+          {
+            "name": "6-Session Pack (1 yr)",
+            "price": "€270",
+            "detail": "Full follow-up"
+          }
+        ]
+      },
+      "duration": "1h",
+      "benefits": [
+        "Potty training & staying alone",
+        "Bite inhibition",
+        "Socialization with dogs and humans",
+        "Prevention of fears and anxiety"
+      ]
+    },
+    "education": {
+      "title": "Basic Training (Adult)",
+      "shortDesc": "Obedience, loose leash walking, and calmness management. Respectful methodology.",
+      "fullDesc": "For adult dogs needing a refresher on the basics or to correct bad habits. Comprehensive coaching with follow-up.",
+      "pricing": {
+        "unit": "€55",
+        "unitDetail": "/ hour",
+        "packs": [
+          {
+            "name": "3-Session Pack",
+            "price": "€160",
+            "detail": "~€53/session"
+          },
+          {
+            "name": "6-Session Pack",
+            "price": "€320",
+            "detail": "~€53/session"
+          }
+        ]
+      },
+      "duration": "1h to 1.5h",
+      "benefits": [
+        "Obedience: Sit, Stay, Recall, Leash walking",
+        "Impulse control & Calmness",
+        "WhatsApp support & adjustments 7 days a week",
+        "Detailed report after each session"
+      ]
+    },
+    "balade": {
+      "title": "Educational Walks",
+      "shortDesc": "Supervised walks to work on socialization and canine communication.",
+      "fullDesc": "Does your dog pull on the leash or react to other dogs? Practice in real-life situations with other dogs.",
+      "pricing": {
+        "unit": "€16",
+        "unitDetail": "/ hour",
+        "packs": [
+          {
+            "name": "5-Walk Pack",
+            "price": "€60",
+            "detail": "€12 per walk (Promo)"
+          }
+        ]
+      },
+      "duration": "1h - 1.5h",
+      "benefits": [
+        "Socialization work",
+        "Reading canine body language",
+        "Physical and mental exercise",
+        "Learning to stay calm"
+      ]
+    },
+    "troubles": {
+      "title": "Behavior Modification",
+      "shortDesc": "Management of reactivity, aggression, anxiety, destruction... Solutions for complex problems.",
+      "fullDesc": "Targeted expertise to resolve any behavioral disorders your dog may be experiencing.",
+      "pricing": {
+        "unit": "€60",
+        "unitDetail": "/ session",
+        "packs": [
+          {
+            "name": "4-Session Pack",
+            "price": "€235",
+            "detail": "Intensive support"
+          },
+          {
+            "name": "8-Session Pack",
+            "price": "€450",
+            "detail": "Complete rehabilitation"
+          },
+          {
+            "name": "10-Session Pack",
+            "price": "€500",
+            "detail": "In-depth expertise"
+          }
+        ]
+      },
+      "duration": "Custom",
+      "benefits": [
+        "Reactivity management (leash, dogs, humans, bikes, etc.)",
+        "Aggression",
+        "Separation anxiety & property destruction",
+        "Resource guarding",
+        "Fears and phobias",
+        "Hyper-attachment or excessive barking",
+        "Daily monitoring & emotional management"
+      ]
+    },
+    "garderie": {
+      "title": "In-Home Pet Sitting",
+      "shortDesc": "I take care of your companion while you are away.",
+      "fullDesc": "Visits and sitting at your home for your pet's comfort. Several packages tailored to your needs.",
+      "pricing": {
+        "unit": "From €25",
+        "unitDetail": "",
+        "packs": [
+          {
+            "name": "Day",
+            "price": "€25",
+            "detail": "3 walks + care"
+          },
+          {
+            "name": "Night",
+            "price": "€25",
+            "detail": "Overnight presence"
+          },
+          {
+            "name": "Premium (24h)",
+            "price": "€45",
+            "detail": "Day + Night included"
+          }
+        ]
+      },
+      "duration": "Variable",
+      "benefits": [
+        "No stress from changing environments",
+        "Walks included",
+        "Updates via text/photos",
+        "Medical care and medication if needed"
+      ]
+    }
   }
 }

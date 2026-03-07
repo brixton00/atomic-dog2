@@ -74,5 +74,225 @@
       "desc2": "Discutons de votre chien.",
       "btn": "Contactez-moi"
     }
+  },
+  "footer": {
+    "mission": "Éducation et comportement canin en méthode 100% positive. Relation de confiance et respect mutuel.",
+    "servicesTitle": "Nos Services",
+    "links": {
+      "bilan": "Bilan Comportemental",
+      "chiot": "École du Chiot",
+      "education": "Éducation Adulte",
+      "balade": "Balades Collectives",
+      "faq": "FAQ"
+    },
+    "infoTitle": "Infos Pratiques",
+    "info": {
+      "zoneTitle": "Zone d'intervention",
+      "zoneDesc": "Alcanadre, Logroño, Estella-Lizarra, Tafalla, Calahorra, Pamplona, Navarre, La Rioja etc.",
+      "hoursTitle": "Horaires",
+      "hoursWeek": "Lun - Ven :",
+      "hoursWeekend": "Sam - Dim :"
+    },
+    "ctaBook": "Prendre rendez-vous",
+    "rights": "Tous droits réservés",
+    "legal": {
+      "mentions": "Mentions Légales",
+      "cgv": "CGV",
+      "privacy": "Confidentialité"
+    }
+  },
+  "about": {
+    "hero": {
+      "imageAlt": "Portrait de l'éducatrice",
+      "badgeLine1": "Passionnée &",
+      "badgeLine2": "Certifiée",
+      "subtitle": "À propos de moi",
+      "title1": "Plus qu'un métier,",
+      "titleHighlight": "une vocation.",
+      "p1": "Bonjour ! Je suis une éducatrice canine passionnée, dédiée à renforcer le lien unique qui unit chaque chien à son humain.",
+      "p2": "Mon approche ne se limite pas à \"apprendre des ordres\". Mon objectif est de vous donner les clés pour comprendre votre compagnon : ses besoins, ses émotions et son langage.",
+      "p3": "Loin des méthodes coercitives d'autrefois, je défends une éducation 100% positive et bienveillante, basée sur les dernières avancées scientifiques en éthologie."
+    },
+    "values": {
+      "title": "Ma vision de l'éducation",
+      "subtitle": "Chaque chien est un individu à part entière. Il n'existe pas de \"méthode magique\", mais une adaptation constante guidée par trois piliers.",
+      "val1Title": "Bienveillance Absolue",
+      "val1Desc": "Aucune violence, ni physique ni psychologique. Nous travaillons avec la motivation du chien (jeu, friandises, félicitations) pour créer une coopération joyeuse.",
+      "val2Title": "Expertise Scientifique",
+      "val2Desc": "Je me forme continuellement aux nouvelles découvertes en éthologie canine pour vous proposer des solutions modernes, éthiques et efficaces.",
+      "val3Title": "Sur-Mesure",
+      "val3Desc": "Votre vie, votre environnement et votre chien sont uniques. J'adapte chaque exercice pour qu'il soit réalisable et pertinent dans votre quotidien."
+    },
+    "journey": {
+      "title": "Mon Parcours",
+      "desc": "L'éducation canine exige une formation continue rigoureuse. De mon diplôme d'État aux spécialisations en comportement, voici les étapes clés qui ont forgé mon expertise et ma méthode sur le terrain.",
+      "imageAlt": "En pleine séance d'éducation"
+    },
+    "cta": {
+      "quote": "Mon but n'est pas de dresser un chien parfait, mais de vous aider à construire une relation parfaite avec votre chien.",
+      "btn": "Me contacter"
+    }
+  },
+  "servicesData": {
+    "bilan": {
+      "title": "Bilan Comportemental",
+      "shortDesc": "Le point de départ obligatoire. Analyse complète de la relation et de l'environnement.",
+      "fullDesc": "Avant toute chose, je dois comprendre qui est votre chien et comment vous vivez ensemble. Ce bilan à domicile nous permet d'identifier les causes profondes des comportements gênants.",
+      "pricing": {
+        "unit": "65 €",
+        "unitDetail": "/ séance",
+        "packs": []
+      },
+      "duration": "1h30 - 2h",
+      "benefits": [
+        "Analyse de l'environnement familial",
+        "Observation du chien dans son quotidien",
+        "Définition des objectifs d'éducation",
+        "Mise en place du protocole de travail"
+      ]
+    },
+    "chiot": {
+      "title": "École du Chiot",
+      "shortDesc": "Les bonnes bases : propreté, socialisation et gestion des émotions.",
+      "fullDesc": "L'arrivée d'un chiot est un bouleversement. Je vous guide pour partir sur des bases saines. Formule complète pour suivre l'évolution.",
+      "pricing": {
+        "unit": "45 €",
+        "unitDetail": "/ séance",
+        "packs": [
+          {
+            "name": "Formule 6 séances (1 an)",
+            "price": "270 €",
+            "detail": "Suivi complet"
+          }
+        ]
+      },
+      "duration": "1h",
+      "benefits": [
+        "Apprentissage de la propreté & solitude",
+        "Inhibition de la morsure",
+        "Socialisation congénères et humains",
+        "Prévention des peurs et anxiété"
+      ]
+    },
+    "education": {
+      "title": "Éducation de Base (Adulte)",
+      "shortDesc": "Obéissance, marche en laisse et gestion du calme. Méthode respectueuse.",
+      "fullDesc": "Pour les chiens adultes ayant besoin de revoir les bases ou de corriger de mauvaises habitudes. Un accompagnement complet avec suivi.",
+      "pricing": {
+        "unit": "55 €",
+        "unitDetail": "/ heure",
+        "packs": [
+          {
+            "name": "Pack 3 séances",
+            "price": "160 €",
+            "detail": "soit ~53€/séance"
+          },
+          {
+            "name": "Pack 6 séances",
+            "price": "320 €",
+            "detail": "soit ~53€/séance"
+          }
+        ]
+      },
+      "duration": "1h à 1h30",
+      "benefits": [
+        "Obéissance : Assis, Reste, Rappel, Marche en laisse",
+        "Contrôle des impulsions & Calme",
+        "Suivi & Corrections WhatsApp 7j/7",
+        "Compte rendu détaillé après chaque séance"
+      ]
+    },
+    "balade": {
+      "title": "Balades Éducatives",
+      "shortDesc": "Promenades encadrées pour travailler la socialisation et les codes canins.",
+      "fullDesc": "Votre chien tire en laisse ou réagit aux autres chiens ? Travaillez en situation réelle avec des congénères.",
+      "pricing": {
+        "unit": "16 €",
+        "unitDetail": "/ heure",
+        "packs": [
+          {
+            "name": "Pack 5 balades",
+            "price": "60 €",
+            "detail": "soit 12€ la balade (Promo)"
+          }
+        ]
+      },
+      "duration": "1h - 1h30",
+      "benefits": [
+        "Travail de la socialisation",
+        "Lecture des codes canins",
+        "Dépense physique et mentale",
+        "Apprentissage du calme"
+      ]
+    },
+    "troubles": {
+      "title": "Modification de Comportement",
+      "shortDesc": "Gestion de la réactivité, agressivité, anxiété, destruction... Solutions aux problèmes complexes.",
+      "fullDesc": "Une expertise ciblée pour résoudre tous les troubles du comportement que peut vivre votre chien.",
+      "pricing": {
+        "unit": "60 €",
+        "unitDetail": "/ séance",
+        "packs": [
+          {
+            "name": "Pack 4 séances",
+            "price": "235 €",
+            "detail": "Suivi intensif"
+          },
+          {
+            "name": "Pack 8 séances",
+            "price": "450 €",
+            "detail": "Rééducation complète"
+          },
+          {
+            "name": "Pack 10 séances",
+            "price": "500 €",
+            "detail": "Expertise approfondie"
+          }
+        ]
+      },
+      "duration": "Personnalisé",
+      "benefits": [
+        "Gestion de la réactivité (laisse, congénères, humains, vélos/joggeurs etc.)",
+        "Agressivité",
+        "Anxiété de séparation & destruction matérielle",
+        "Protection de ressources",
+        "Peurs et phobies",
+        "hyper-attachement ou aboiements excessifs",
+        "Suivi quotidien & Gestion émotionnelle"
+      ]
+    },
+    "garderie": {
+      "title": "Garde à Domicile",
+      "shortDesc": "Je prends soin de votre compagnon pendant votre absence.",
+      "fullDesc": "Visites et gardes à votre domicile pour le confort de votre animal. Plusieurs formules adaptées à vos besoins.",
+      "pricing": {
+        "unit": "Dès 25 €",
+        "unitDetail": "",
+        "packs": [
+          {
+            "name": "Journée",
+            "price": "25 €",
+            "detail": "3 promenades + soins"
+          },
+          {
+            "name": "Nuit",
+            "price": "25 €",
+            "detail": "Présence nocturne"
+          },
+          {
+            "name": "Premium (24h)",
+            "price": "45 €",
+            "detail": "Jour + Nuit inclus"
+          }
+        ]
+      },
+      "duration": "Variable",
+      "benefits": [
+        "Pas de stress du changement d'environnement",
+        "Promenades incluses",
+        "Nouvelles par SMS/Photos",
+        "Soins et médicaments si besoin"
+      ]
+    }
   }
 }
