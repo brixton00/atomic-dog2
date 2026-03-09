@@ -1,17 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Award, Heart, BookOpen, GraduationCap, Quote } from "lucide-react";
+
+// Import du composant client d'affichage
 import ExperienceCards from "@/components/cards/experienceCard";
 
-// Import de la fonction d'extraction du dictionnaire
+// Import du générateur de données et du dictionnaire
 import { getDictionary } from "@/dictionaries/dictionaries";
+import { getExperiencesData } from "@/data/experiences";
 
 export default async function About({ params }) {
-  // 1. Extraction de la locale depuis l'URL
+  // 1. Extraction asynchrone de la locale depuis l'URL (Next.js 15+)
   const { locale } = await params;
 
-  // 2. Chargement du dictionnaire correspondant
+  // 2. Chargement du dictionnaire correspondant (Server-Side)
   const dict = await getDictionary(locale);
+
+  // 3. Génération du tableau d'expériences traduit en lui injectant le dictionnaire
+  // Pourquoi : On évite que le composant ExperienceCards gère la logique de traduction.
+  // Il devient un pur composant de présentation (Dumb Component).
+  const translatedExperiences = getExperiencesData(dict);
 
   return (
     <div className="bg-neutral-bg min-h-screen">
@@ -144,8 +152,8 @@ export default async function About({ params }) {
           </div>
 
           <div className="w-full">
-            {/* Attention : ExperienceCards devra lui aussi être converti selon la même logique que services.jsx */}
-            <ExperienceCards />
+            {/* Injection des props traduites au composant */}
+            <ExperienceCards experiences={translatedExperiences} />
           </div>
         </div>
       </section>
@@ -158,7 +166,7 @@ export default async function About({ params }) {
             "{dict.about.cta.quote}"
           </p>
           <div className="flex justify-center">
-            {/* Correction critique : Le lien utilise désormais la locale */}
+            {/* Lien dynamique respectant la locale en cours */}
             <Link
               href={`/${locale}/contact`}
               className="bg-white text-primary hover:bg-neutral-bg px-8 py-3 rounded-full font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"

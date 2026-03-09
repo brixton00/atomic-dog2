@@ -1,83 +1,83 @@
-import { 
-  Award, 
-  Briefcase, 
-  GraduationCap, 
-  HeartHandshake, 
-  ShieldCheck, 
-  MapPin 
+import {
+  Award,
+  Briefcase,
+  GraduationCap,
+  HeartHandshake,
+  ShieldCheck,
+  MapPin,
 } from "lucide-react";
 
-export const experiencesData = [
+export const getExperiencesData = (dict) => [
   {
     id: 1,
-    year: "2023 - Aujourd'hui",
-    title: "Instructrice en Centre Canin",
-    location: "Cours Collectifs",
-    description: "Animation de séances de groupe : socialisation, obéissance et gestion des interactions congénères.",
+    year: dict.experiencesData[0].year,
+    title: dict.experiencesData[0].title,
+    location: dict.experiencesData[0].location,
+    description: dict.experiencesData[0].description,
     icon: Briefcase,
-    type: "experience"
+    type: "experience",
   },
   {
     id: 2,
-    year: "2022 - 2023",
-    title: "Responsable de Pension Canine",
-    location: "Navarre (Espagne)",
-    description: "Gestion complète d'une structure d'accueil : soins quotidiens, logistique et bien-être animal.",
+    year: dict.experiencesData[1].year,
+    title: dict.experiencesData[1].title,
+    location: dict.experiencesData[1].location,
+    description: dict.experiencesData[1].description,
     icon: MapPin,
-    type: "experience"
+    type: "experience",
   },
   {
     id: 3,
-    year: "2022",
-    title: "Spécialisation Troubles du Comportement",
-    location: "Avec Nicolas Greveldinger",
-    description: "Formation expert sur la réhabilitation comportementale et la gestion des cas complexes.",
+    year: dict.experiencesData[2].year,
+    title: dict.experiencesData[2].title,
+    location: dict.experiencesData[2].location,
+    description: dict.experiencesData[2].description,
     icon: GraduationCap,
-    type: "formation"
+    type: "formation",
   },
   {
     id: 4,
-    year: "2020 - 2022",
-    title: "Réhabilitation & Accompagnement",
-    location: "Refuge Animalier",
-    description: "Accompagnement et réhabilitation des chiens sauvés en processus d'adoption (Perros rescatados).",
+    year: dict.experiencesData[3].year,
+    title: dict.experiencesData[3].title,
+    location: dict.experiencesData[3].location,
+    description: dict.experiencesData[3].description,
     icon: HeartHandshake,
-    type: "experience"
+    type: "experience",
   },
   {
     id: 5,
-    year: "2020",
-    title: "Manipulation Chiens de Refuge",
-    location: "Formation Spécialisée",
-    description: "Techniques de sécurité et d'approche pour les chiens craintifs ou défensifs en milieu confiné.",
+    year: dict.experiencesData[4].year,
+    title: dict.experiencesData[4].title,
+    location: dict.experiencesData[4].location,
+    description: dict.experiencesData[4].description,
     icon: ShieldCheck,
-    type: "formation"
+    type: "formation",
   },
   {
     id: 6,
-    year: "2019",
-    title: "Habilitation Chiens Catégorisés",
-    location: "Certification Officielle",
-    description: "Formation à la manipulation et à la gestion des chiens dits 'dangereux' (Loi 1999).",
+    year: dict.experiencesData[5].year,
+    title: dict.experiencesData[5].title,
+    location: dict.experiencesData[5].location,
+    description: dict.experiencesData[5].description,
     icon: Award,
-    type: "formation"
+    type: "formation",
   },
   {
     id: 7,
-    year: "2019",
-    title: "Secourisme Canin",
-    location: "Formation Certifiante",
-    description: "Maîtrise des gestes de premiers secours et soins d'urgence pour chiens.",
+    year: dict.experiencesData[6].year,
+    title: dict.experiencesData[6].title,
+    location: dict.experiencesData[6].location,
+    description: dict.experiencesData[6].description,
     icon: Award,
-    type: "formation"
+    type: "formation",
   },
   {
     id: 8,
-    year: "2018",
-    title: "Diplôme National d'Éducateur Canin",
-    location: "France",
-    description: "Obtention du diplôme d'État. Socle théorique et pratique de l'éducation canine.",
+    year: dict.experiencesData[7].year,
+    title: dict.experiencesData[7].title,
+    location: dict.experiencesData[7].location,
+    description: dict.experiencesData[7].description,
     icon: GraduationCap,
-    type: "formation"
-  }
+    type: "formation",
+  },
 ];

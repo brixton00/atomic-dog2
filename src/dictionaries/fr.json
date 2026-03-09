@@ -299,5 +299,217 @@
     "recommended": "Recommandé",
     "packsAvailable": "Packs disponibles",
     "learnMore": "En savoir plus"
-  }
+  },
+  "servicesPage": {
+    "title": "Mes Services & Tarifs",
+    "subtitle": "De l'éducation du chiot à la rééducation comportementale, je vous propose un accompagnement adapté à vos besoins et à ceux de votre chien.",
+    "duration": "Durée :",
+    "formulas": "Formules & Packs",
+    "bookService": "Réserver ce service",
+    "noIdeaTitle": "Vous ne savez pas quel service choisir ?",
+    "contactMe": "Contactez-moi pour en discuter"
+  },
+  "method": {
+    "hero": {
+      "title": "Une Approche Scientifique & Bienveillante",
+      "subtitle": "L'éducation canine a évolué. Oubliez la dominance et la force. Ma méthode repose sur l'éthologie et les lois de l'apprentissage pour des résultats durables."
+    },
+    "philosophy": {
+      "title1": "L'Éducation Bienveillante",
+      "p1": "Loin d'être une méthode \"permissive\", l'éducation bienveillante est une approche rigoureuse qui respecte l'intégrité physique et émotionnelle du chien. Nous ne cherchons pas à soumettre l'animal, mais à obtenir sa ",
+      "p1Strong": "coopération volontaire",
+      "p2": "Concrètement, nous renforçons les bons comportements (récompenses, jeux, félicitations) pour qu'ils se répètent, et nous gérons l'environnement pour éviter les erreurs, sans jamais utiliser la peur ou la douleur.",
+      "frameTitle": "Un Cadre Structurant",
+      "frameDesc": "Bienveillance ne signifie pas laxisme. Je travaille avec un cadre clair et cohérent. Les règles et les limites sont indispensables pour que votre chien se sente en sécurité. Mon rôle est de vous aider à poser ce cadre structurant, mais toujours de manière juste et explicable au chien.",
+      "title2": "Validé par la Science",
+      "p3": "Ma pratique s'appuie sur des données factuelles issues de l'éthologie (l'étude du comportement) et de la psychologie comportementale.",
+      "point1Title": "Conditionnement Opérant (Skinner) : ",
+      "point1Desc": "Le chien apprend par les conséquences de ses actes. Une conséquence agréable renforce le comportement.",
+      "point2Title": "Respect de l'individualité : ",
+      "point2Desc": "Chaque chien a ses propres motivations, ses peurs et son seuil de tolérance. Pas de \"recette magique\", mais du sur-mesure.",
+      "point3Title": "L'Intelligence comme Moteur : ",
+      "point3Desc": "Votre chien est un être doué de capacités cognitives exceptionnelles. Plutôt que d'utiliser la contrainte ou des outils coercitifs, nous stimulons son intelligence. C'est sa capacité à réfléchir et à comprendre qui génère une progression durable."
+    },
+    "process": {
+      "title": "Un Accompagnement en 4 Étapes",
+      "subtitle": "De la prise de contact à l'autonomie, voici comment nous allons travailler ensemble.",
+      "steps": [
+        {
+          "title": "1. Premier Contact",
+          "desc": "Échange téléphonique pour cerner vos besoins et vérifier que je suis la bonne personne pour vous aider."
+        },
+        {
+          "title": "2. Le Bilan",
+          "desc": "(Évaluation Comportementale). À votre domicile, analyse complète de l'environnement et du chien (2h)."
+        },
+        {
+          "title": "3. Plan Personnalisé",
+          "desc": "Mise en place d'un protocole d'exercices adapté à VOTRE quotidien et à VOTRE chien."
+        },
+        {
+          "title": "4. Suivi & Évolution",
+          "desc": "Séances pratiques pour ajuster, progresser et valider les acquis jusqu'à l'autonomie."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à changer de regard sur votre chien ?",
+      "btn": "Commencer par un bilan"
+    }
+  },
+  "faqPage": {
+    "hero": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Comprendre mon métier, mes méthodes et le déroulement des séances."
+    },
+    "questions": [
+      {
+        "question": "Qu'est-ce qu'un éducateur canin et à quoi ça sert ?",
+        "answer": "C'est un spécialiste de la relation Homme-Chien. Mon rôle n'est pas de simplement « dresser » votre animal, mais de vous fournir les outils pour le comprendre et communiquer clairement avec lui. Cela sert à établir des règles de vie saines, à résoudre des problèmes du quotidien (propreté, destruction, solitude) et à garantir la sécurité et le bien-être de tous."
+      },
+      {
+        "question": "Qu'est-ce que cela peut m'apporter ?",
+        "answer": "Au-delà de l'obéissance pure, cela vous apporte de la sérénité. Vous apprendrez à décrypter les signaux de votre chien, à prévenir les conflits et à renforcer votre complicité. C'est un investissement pour construire une relation harmonieuse qui durera 10 ou 15 ans."
+      },
+      {
+        "question": "À qui cela s'adresse-t-il ?",
+        "answer": "À tout le monde ! Aux propriétaires de chiots qui veulent partir sur de bonnes bases, aux familles rencontrant des difficultés avec un chien adulte, ou simplement aux passionnés qui veulent approfondir leur lien. Il n'y a pas de « mauvais maître », il n'y a que des binômes qui ont besoin d'ajustements."
+      },
+      {
+        "question": "Quand faire appel à un éducateur canin ?",
+        "answer": "L'idéal est la prévention : dès l'arrivée du chiot ou avant même une adoption. Cependant, il faut consulter dès l'apparition d'un comportement gênant (agressivité, peur, aboiements excessifs). N'attendez pas que la situation s'envenime ; il est toujours plus facile de prévenir que de guérir."
+      },
+      {
+        "question": "Est-il encore possible de changer le comportement de mon chien (malgré son âge/passé) ?",
+        "answer": "OUI, absolument. Le cerveau du chien reste plastique toute sa vie. Qu'il ait 5 ans, 10 ans, ou un passé lourd (refuge, maltraitance), on peut toujours modifier des comportements et apaiser des émotions. Cela demande parfois plus de patience qu'avec un chiot, mais les progrès sont toujours possibles."
+      },
+      {
+        "question": "Quelles méthodes utilisez-vous ?",
+        "answer": "Je travaille exclusivement avec des méthodes positives et bienveillantes, basées sur les sciences comportementales (éthologie). Nous utilisons la motivation du chien (jeu, récompenses) pour renforcer les bons comportements. Je refuse tout outil coercitif (collier étrangleur, électrique) ou violence physique/psychologique."
+      },
+      {
+        "question": "Où se déroulent les séances ?",
+        "answer": "Le Bilan Comportemental (1ère séance) se déroule obligatoirement à votre domicile pour observer le chien dans son environnement réel. Les séances de suivi peuvent ensuite avoir lieu à domicile ou en extérieur (parc, ville, forêt) selon les problématiques à travailler (marche en laisse, rappel, congénères)."
+      },
+      {
+        "question": "Comment solliciter une première séance ?",
+        "answer": "Vous pouvez me contacter via le formulaire du site ou par téléphone. Nous conviendrons ensemble d'un rendez-vous pour effectuer un Bilan Comportemental (durée 1h30 à 2h). C'est l'étape indispensable pour que je puisse analyser la situation et vous proposer un plan de travail sur-mesure."
+      },
+      {
+        "question": "Proposez-vous des facilités de paiement ?",
+        "answer": "Oui. Le bilan comportemental est à régler le jour même de la séance. En revanche, pour les forfaits d'éducation ou de rééducation, vous avez la possibilité de régler en 2 fois sans frais pour étaler la dépense."
+      }
+    ],
+    "cta": {
+      "title": "Vous n'avez pas trouvé votre réponse ?",
+      "desc": "Chaque situation est unique. N'hésitez pas à me contacter pour en discuter de vive voix.",
+      "btn": "Me poser une question"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Parlons de votre chien",
+      "subtitle": "Une question ? Un problème de comportement ? Remplissez ce formulaire complet pour que je puisse analyser votre situation."
+    },
+    "info": {
+      "title": "Mes coordonnées",
+      "phoneTitle": "Téléphone & WhatsApp",
+      "phoneDesc": "Réponse sous 24h (laissez un message)",
+      "emailTitle": "Email",
+      "zoneTitle": "Zone d'intervention",
+      "zoneDesc": "Je me déplace à votre domicile dans un rayon de 50km environ autour de ma localisation (Alcanadre).",
+      "whatsappBtn": "Discuter sur WhatsApp",
+      "instaTitle": "Suivez le quotidien"
+    },
+    "form": {
+      "whyTitle": "Pourquoi demander un bilan ?",
+      "whyDesc": "Le bilan comportemental est la première étape indispensable. Il ne vous engage pas sur un forfait, mais vous apporte déjà des réponses concrètes et un plan d'action adapté à votre chien.",
+      "title": "Envoyez-moi un message",
+      "successTitle": "Message envoyé !",
+      "successDesc": "Merci de m'avoir contactée. Je reviens vers vous très vite (généralement sous 24h).",
+      "successBtn": "Envoyer un autre message",
+      "section1": "Vos Informations",
+      "firstName": "Prénom *",
+      "lastName": "Nom *",
+      "city": "Ville de résidence *",
+      "section2": "Votre Chien",
+      "dogName": "Son Nom *",
+      "dogAge": "Âge *",
+      "dogBreed": "Race / Type *",
+      "section3": "Contact & Demande",
+      "email": "Email *",
+      "phone": "Téléphone *",
+      "subject": "Je suis intéressé(e) par...",
+      "subjectOptions": {
+        "bilan": "Bilan Comportemental (Recommandé)",
+        "chiot": "École du Chiot",
+        "education": "Éducation Adulte",
+        "balade": "Balades Éducatives",
+        "autre": "Autre demande"
+      },
+      "message": "Votre message",
+      "messagePlaceholder": "Racontez-moi brièvement les difficultés que vous rencontrez avec votre chien...",
+      "submitBtn": "Envoyer ma demande",
+      "submittingBtn": "Envoi en cours...",
+      "disclaimer": "En soumettant ce formulaire, vous acceptez d'être recontacté(e) dans le cadre de votre demande. Vos données restent confidentielles."
+    }
+  },
+  "experiencesData": [
+    {
+      "id": 1,
+      "year": "2023 - Aujourd'hui",
+      "title": "Instructrice en Centre Canin",
+      "location": "Cours Collectifs",
+      "description": "Animation de séances de groupe : socialisation, obéissance et gestion des interactions congénères."
+    },
+    {
+      "id": 2,
+      "year": "2022 - 2023",
+      "title": "Responsable de Pension Canine",
+      "location": "Navarre (Espagne)",
+      "description": "Gestion complète d'une structure d'accueil : soins quotidiens, logistique et bien-être animal."
+    },
+    {
+      "id": 3,
+      "year": "2022",
+      "title": "Spécialisation Troubles du Comportement",
+      "location": "Avec Nicolas Greveldinger",
+      "description": "Formation expert sur la réhabilitation comportementale et la gestion des cas complexes."
+    },
+    {
+      "id": 4,
+      "year": "2020 - 2022",
+      "title": "Réhabilitation & Accompagnement",
+      "location": "Refuge Animalier",
+      "description": "Accompagnement et réhabilitation des chiens sauvés en processus d'adoption (Perros rescatados)."
+    },
+    {
+      "id": 5,
+      "year": "2020",
+      "title": "Manipulation Chiens de Refuge",
+      "location": "Formation Spécialisée",
+      "description": "Techniques de sécurité et d'approche pour les chiens craintifs ou défensifs en milieu confiné."
+    },
+    {
+      "id": 6,
+      "year": "2019",
+      "title": "Habilitation Chiens Catégorisés",
+      "location": "Certification Officielle",
+      "description": "Formation à la manipulation et à la gestion des chiens dits 'dangereux' (Loi 1999)."
+    },
+    {
+      "id": 7,
+      "year": "2019",
+      "title": "Secourisme Canin",
+      "location": "Formation Certifiante",
+      "description": "Maîtrise des gestes de premiers secours et soins d'urgence pour chiens."
+    },
+    {
+      "id": 8,
+      "year": "2018",
+      "title": "Diplôme National d'Éducateur Canin",
+      "location": "France",
+      "description": "Obtention du diplôme d'État. Socle théorique et pratique de l'éducation canine."
+    }
+  ]
 }
