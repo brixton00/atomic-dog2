@@ -62,33 +62,47 @@ export default function Services() {
 
                 {/* --- BLOC PRIX & PACKS --- */}
                 <div className="bg-white rounded-2xl p-6 border border-primary/10 shadow-sm">
-                    <div className="flex items-baseline gap-2 mb-4">
-                        <span className="text-3xl font-bold text-primary">{displayPrice}</span>
-                        <span className="text-neutral-text/60">{priceDetail}</span>
-                        <span className="ml-auto text-sm font-medium text-neutral-text/50 bg-neutral-bg px-3 py-1 rounded-full">
-                            Durée : {service.duration}
-                        </span>
-                    </div>
+                  <div className="flex items-baseline gap-2 mb-4">
+                    <span className="text-3xl font-bold text-primary">
+                      {displayPrice}
+                    </span>
+                    <span className="text-neutral-text/60">{priceDetail}</span>
+                    <span className="ml-auto text-sm font-medium text-neutral-text/50 bg-neutral-bg px-3 py-1 rounded-full">
+                      Durée : {service.duration}
+                    </span>
+                  </div>
 
-                    {/* Affichage des Packs s'il y en a */}
-                    {packs.length > 0 && (
-                        <div className="space-y-3 mt-4 pt-4 border-t border-gray-100">
-                            <h4 className="text-sm font-bold text-neutral-text uppercase tracking-wider mb-2 flex items-center gap-2">
-                                <Tag className="w-4 h-4 text-secondary" /> Formules & Packs
-                            </h4>
-                            <div className="grid gap-3">
-                                {packs.map((pack, i) => (
-                                    <div key={i} className="flex justify-between items-center bg-neutral-bg/50 p-3 rounded-lg hover:bg-secondary/5 transition-colors">
-                                        <span className="font-medium text-neutral-text">{pack.name}</span>
-                                        <div className="text-right">
-                                            <span className="block font-bold text-primary">{pack.price}</span>
-                                            {pack.detail && <span className="block text-[10px] text-gray-500">{pack.detail}</span>}
-                                        </div>
-                                    </div>
-                                ))}
+                  {/* Affichage des Packs s'il y en a */}
+                  {packs.length > 0 && (
+                    <div className="space-y-3 mt-4 pt-4 border-t border-gray-100">
+                      <h4 className="text-sm font-bold text-neutral-text uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <Tag className="w-4 h-4 text-secondary" /> Formules &
+                        Packs
+                      </h4>
+                      <div className="grid gap-3">
+                        {packs.map((pack, i) => (
+                          <div
+                            key={i}
+                            className="flex justify-between items-center bg-neutral-bg/50 p-3 rounded-lg hover:bg-secondary/5 transition-colors"
+                          >
+                            <span className="font-medium text-neutral-text">
+                              {pack.name}
+                            </span>
+                            <div className="text-right">
+                              <span className="block font-bold text-primary">
+                                {pack.price}
+                              </span>
+                              {pack.detail && (
+                                <span className="block text-[10px] text-gray-500">
+                                  {pack.detail}
+                                </span>
+                              )}
                             </div>
-                        </div>
-                    )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Liste des bénéfices */}
