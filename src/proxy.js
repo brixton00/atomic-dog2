@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 // 1. Définition stricte de nos langues supportées (Whitelist de sécurité)
 const locales = ["fr", "en", "es"];
 // 2. Langue de repli si aucune n'est trouvée ou demandée
-const defaultLocale = "fr";
+const defaultLocale = "es";
 
 // ⚠️ CHANGEMENT ICI : La fonction s'appelle désormais "proxy" et non plus "middleware"
 export function proxy(request) {
