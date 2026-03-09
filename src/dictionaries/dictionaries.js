@@ -9,7 +9,9 @@ const dictionaries = {
 };
 
 export const getDictionary = async (locale) => {
-  // Sécurité : fallback sur 'fr' si la locale demandée n'existe pas
-  const loadDict = dictionaries[locale] || dictionaries.fr;
+  // ⚠️ CORRECTION : Sécurité : fallback sur 'es' (espagnol) au lieu de 'fr'
+  // Si un utilisateur tape une locale invalide, on force le chargement du dictionnaire espagnol.
+  const loadDict = dictionaries[locale] || dictionaries.es;
+
   return loadDict();
 };
