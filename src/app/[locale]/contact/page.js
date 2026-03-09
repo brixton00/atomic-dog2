@@ -5,16 +5,27 @@ export default async function Contact({ params }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
 
+  // 🛡️ SÉCURITÉ (Defensive Programming) :
+  // On s'assure que l'objet existe avant d'essayer de lire ses propriétés.
+  if (!dict.contactPage) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-neutral-bg">
+        <p className="text-neutral-text font-bold">
+          Traductions en cours de chargement / manquantes...
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-neutral-bg min-h-screen">
-      <style jsx global>{`
+      {/* CORRECTION NEXT.JS : Utilisation d'une balise style native sans l'attribut jsx */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
         .animate-scroll {
           display: flex;
@@ -24,7 +35,9 @@ export default async function Contact({ params }) {
         .animate-scroll:hover {
           animation-play-state: paused;
         }
-      `}</style>
+      `,
+        }}
+      />
 
       {/* --- HEADER SERVEUR --- */}
       <section className="bg-primary py-20 px-4 text-center text-white relative overflow-hidden">
@@ -39,7 +52,7 @@ export default async function Contact({ params }) {
         </div>
       </section>
 
-      {/* --- FORMULAIRE CLIENT (On passe le dictionnaire en prop) --- */}
+      {/* --- FORMULAIRE CLIENT --- */}
       <ContactClient dict={dict.contactPage} />
     </div>
   );

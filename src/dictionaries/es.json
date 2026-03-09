@@ -299,5 +299,217 @@
     "recommended": "Recomendado",
     "packsAvailable": "Packs disponibles",
     "learnMore": "Saber más"
-  }
+  },
+  "servicesPage": {
+    "title": "Mis Servicios y Tarifas",
+    "subtitle": "Desde la educación del cachorro hasta la reeducación comportamental, te ofrezco un acompañamiento adaptado a tus necesidades y a las de tu perro.",
+    "duration": "Duración:",
+    "formulas": "Fórmulas y Packs",
+    "bookService": "Reservar este servicio",
+    "noIdeaTitle": "¿No sabes qué servicio elegir?",
+    "contactMe": "Contáctame para hablarlo"
+  },
+  "method": {
+    "hero": {
+      "title": "Un Enfoque Científico y Amable",
+      "subtitle": "La educación canina ha evolucionado. Olvida la dominancia y la fuerza. Mi método se basa en la etología y las leyes del aprendizaje para resultados duraderos."
+    },
+    "philosophy": {
+      "title1": "La Educación Amable",
+      "p1": "Lejos de ser un método \"permisivo\", la educación amable es un enfoque riguroso que respeta la integridad física y emocional del perro. No buscamos someter al animal, sino obtener su ",
+      "p1Strong": "cooperación voluntaria",
+      "p2": "Concretamente, reforzamos los buenos comportamientos (premios, juegos, felicitaciones) para que se repitan, y gestionamos el entorno para evitar errores, sin utilizar nunca el miedo o el dolor.",
+      "frameTitle": "Un Marco Estructurado",
+      "frameDesc": "Amabilidad no significa laxitud. Trabajo con un marco claro y coherente. Las reglas y límites son indispensables para que tu perro se sienta seguro. Mi rol es ayudarte a establecer este marco estructurado, pero siempre de manera justa y explicable para el perro.",
+      "title2": "Validado por la Ciencia",
+      "p3": "Mi práctica se basa en datos factuales derivados de la etología (el estudio del comportamiento) y la psicología comportamental.",
+      "point1Title": "Condicionamiento Operante (Skinner): ",
+      "point1Desc": "El perro aprende por las consecuencias de sus actos. Una consecuencia agradable refuerza el comportamiento.",
+      "point2Title": "Respeto a la individualidad: ",
+      "point2Desc": "Cada perro tiene sus propias motivaciones, sus miedos y su umbral de tolerancia. No hay \"receta mágica\", sino un trabajo a medida.",
+      "point3Title": "La Inteligencia como Motor: ",
+      "point3Desc": "Tu perro es un ser dotado de capacidades cognitivas excepcionales. En lugar de utilizar la coerción o herramientas coercitivas, estimulamos su inteligencia. Es su capacidad para pensar y comprender lo que genera un progreso duradero."
+    },
+    "process": {
+      "title": "Un Acompañamiento en 4 Etapas",
+      "subtitle": "Desde el primer contacto hasta la autonomía, así es como trabajaremos juntos.",
+      "steps": [
+        {
+          "title": "1. Primer Contacto",
+          "desc": "Intercambio telefónico para identificar tus necesidades y verificar que soy la persona adecuada para ayudarte."
+        },
+        {
+          "title": "2. La Evaluación",
+          "desc": "(Evaluación Comportamental). A domicilio, análisis completo del entorno y del perro (2h)."
+        },
+        {
+          "title": "3. Plan Personalizado",
+          "desc": "Establecimiento de un protocolo de ejercicios adaptado a TU día a día y a TU perro."
+        },
+        {
+          "title": "4. Seguimiento y Evolución",
+          "desc": "Sesiones prácticas para ajustar, progresar y validar lo aprendido hasta la autonomía."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para cambiar tu perspectiva sobre tu perro?",
+      "btn": "Empezar con una evaluación"
+    }
+  },
+  "faqPage": {
+    "hero": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Comprende mi profesión, mis métodos y el desarrollo de las sesiones."
+    },
+    "questions": [
+      {
+        "question": "¿Qué es un educador canino y para qué sirve?",
+        "answer": "Es un especialista en la relación Hombre-Perro. Mi rol no es simplemente «adiestrar» a tu animal, sino proporcionarte las herramientas para comprenderlo y comunicarte claramente con él. Esto sirve para establecer reglas de vida saludables, resolver problemas del día a día (limpieza, destrucción, soledad) y garantizar la seguridad y el bienestar de todos."
+      },
+      {
+        "question": "¿Qué me puede aportar?",
+        "answer": "Más allá de la obediencia pura, te aporta serenidad. Aprenderás a descifrar las señales de tu perro, a prevenir conflictos y a fortalecer su complicidad. Es una inversión para construir una relación armoniosa que durará 10 o 15 años."
+      },
+      {
+        "question": "¿A quién va dirigido?",
+        "answer": "¡A todo el mundo! A los propietarios de cachorros que quieren empezar con buen pie, a las familias que tienen dificultades con un perro adulto, o simplemente a los apasionados que quieren profundizar su vínculo. No hay «malos dueños», solo binomios que necesitan ajustes."
+      },
+      {
+        "question": "¿Cuándo acudir a un educador canino?",
+        "answer": "Lo ideal es la prevención: desde la llegada del cachorro o incluso antes de una adopción. Sin embargo, hay que consultar en cuanto aparezca un comportamiento molesto (agresividad, miedo, ladridos excesivos). No esperes a que la situación empeore; siempre es más fácil prevenir que curar."
+      },
+      {
+        "question": "¿Aún es posible cambiar el comportamiento de mi perro (a pesar de su edad/pasado)?",
+        "answer": "SÍ, absolutamente. El cerebro del perro se mantiene plástico toda su vida. Tenga 5 años, 10 años, o un pasado difícil (refugio, maltrato), siempre se pueden modificar comportamientos y calmar emociones. A veces requiere más paciencia que con un cachorro, pero el progreso siempre es posible."
+      },
+      {
+        "question": "¿Qué métodos utilizas?",
+        "answer": "Trabajo exclusivamente con métodos positivos y amables, basados en las ciencias del comportamiento (etología). Utilizamos la motivación del perro (juego, recompensas) para reforzar los buenos comportamientos. Rechazo cualquier herramienta coercitiva (collar de castigo, eléctrico) o violencia física/psicológica."
+      },
+      {
+        "question": "¿Dónde se realizan las sesiones?",
+        "answer": "La Evaluación Comportamental (1ª sesión) se realiza obligatoriamente en tu domicilio para observar al perro en su entorno real. Las sesiones de seguimiento pueden realizarse luego a domicilio o en exteriores (parque, ciudad, bosque) según los problemas a trabajar (paseo con correa, llamada, socialización)."
+      },
+      {
+        "question": "¿Cómo solicitar una primera sesión?",
+        "answer": "Puedes contactarme a través del formulario de la web o por teléfono. Acordaremos juntos una cita para realizar una Evaluación Comportamental (duración 1h30 a 2h). Es el paso indispensable para que pueda analizar la situación y proponerte un plan de trabajo a medida."
+      },
+      {
+        "question": "¿Ofreces facilidades de pago?",
+        "answer": "Sí. La evaluación comportamental se abona el mismo día de la sesión. En cambio, para los paquetes de educación o reeducación, tienes la posibilidad de pagar en 2 cuotas sin intereses para fraccionar el gasto."
+      }
+    ],
+    "cta": {
+      "title": "¿No encontraste tu respuesta?",
+      "desc": "Cada situación es única. No dudes en contactarme para hablarlo en persona.",
+      "btn": "Hacerme una pregunta"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Hablemos de tu perro",
+      "subtitle": "¿Una pregunta? ¿Un problema de comportamiento? Completa este formulario detallado para que pueda analizar tu situación."
+    },
+    "info": {
+      "title": "Mis datos de contacto",
+      "phoneTitle": "Teléfono y WhatsApp",
+      "phoneDesc": "Respuesta en 24h (deja un mensaje)",
+      "emailTitle": "Email",
+      "zoneTitle": "Zona de intervención",
+      "zoneDesc": "Me desplazo a tu domicilio en un radio de unos 50km alrededor de mi ubicación (Alcanadre).",
+      "whatsappBtn": "Hablar por WhatsApp",
+      "instaTitle": "Sigue el día a día"
+    },
+    "form": {
+      "whyTitle": "¿Por qué pedir una evaluación?",
+      "whyDesc": "La evaluación comportamental es el primer paso indispensable. No te compromete a un paquete, pero ya te aporta respuestas concretas y un plan de acción adaptado a tu perro.",
+      "title": "Envíame un mensaje",
+      "successTitle": "¡Mensaje enviado!",
+      "successDesc": "Gracias por contactarme. Te responderé muy pronto (generalmente en 24h).",
+      "successBtn": "Enviar otro mensaje",
+      "section1": "Tus Datos",
+      "firstName": "Nombre *",
+      "lastName": "Apellido *",
+      "city": "Ciudad de residencia *",
+      "section2": "Tu Perro",
+      "dogName": "Su Nombre *",
+      "dogAge": "Edad *",
+      "dogBreed": "Raza / Tipo *",
+      "section3": "Contacto y Solicitud",
+      "email": "Email *",
+      "phone": "Teléfono *",
+      "subject": "Estoy interesado/a en...",
+      "subjectOptions": {
+        "bilan": "Evaluación Comportamental (Recomendado)",
+        "chiot": "Escuela para Cachorros",
+        "education": "Educación Adultos",
+        "balade": "Paseos Educativos",
+        "autre": "Otra solicitud"
+      },
+      "message": "Tu mensaje",
+      "messagePlaceholder": "Cuéntame brevemente las dificultades que tienes con tu perro...",
+      "submitBtn": "Enviar mi solicitud",
+      "submittingBtn": "Enviando...",
+      "disclaimer": "Al enviar este formulario, aceptas ser contactado/a en relación con tu solicitud. Tus datos se mantienen confidenciales."
+    }
+  },
+  "experiencesData": [
+    {
+      "id": 1,
+      "year": "2023 - Actualidad",
+      "title": "Instructora en Centro Canino",
+      "location": "Clases Grupales",
+      "description": "Animación de sesiones grupales: socialización, obediencia y gestión de interacciones con otros perros."
+    },
+    {
+      "id": 2,
+      "year": "2022 - 2023",
+      "title": "Responsable de Guardería Canina",
+      "location": "Navarra (España)",
+      "description": "Gestión completa de un centro de acogida: cuidados diarios, logística y bienestar animal."
+    },
+    {
+      "id": 3,
+      "year": "2022",
+      "title": "Especialización en Trastornos del Comportamiento",
+      "location": "Con Nicolas Greveldinger",
+      "description": "Formación experta en rehabilitación comportamental y gestión de casos complejos."
+    },
+    {
+      "id": 4,
+      "year": "2020 - 2022",
+      "title": "Rehabilitación y Acompañamiento",
+      "location": "Refugio de Animales",
+      "description": "Acompañamiento y rehabilitación de perros rescatados en proceso de adopción."
+    },
+    {
+      "id": 5,
+      "year": "2020",
+      "title": "Manejo de Perros de Refugio",
+      "location": "Formación Especializada",
+      "description": "Técnicas de seguridad y aproximación para perros miedosos o defensivos en entornos cerrados."
+    },
+    {
+      "id": 6,
+      "year": "2019",
+      "title": "Certificación para Perros Categorizados",
+      "location": "Certificación Oficial",
+      "description": "Formación en el manejo y gestión de perros catalogados como 'peligrosos' (Ley 1999, Francia)."
+    },
+    {
+      "id": 7,
+      "year": "2019",
+      "title": "Primeros Auxilios Caninos",
+      "location": "Formación Certificada",
+      "description": "Dominio de los primeros auxilios y cuidados de emergencia para perros."
+    },
+    {
+      "id": 8,
+      "year": "2018",
+      "title": "Diploma Nacional de Educador Canino",
+      "location": "Francia",
+      "description": "Obtención del diploma estatal francés. Base teórica y práctica de la educación canina."
+    }
+  ]
 }

@@ -299,5 +299,217 @@
     "recommended": "Recommended",
     "packsAvailable": "Packs available",
     "learnMore": "Learn more"
-  }
+  },
+  "servicesPage": {
+    "title": "My Services & Pricing",
+    "subtitle": "From puppy training to behavioral rehabilitation, I offer tailored support for your and your dog's needs.",
+    "duration": "Duration:",
+    "formulas": "Packages & Formulas",
+    "bookService": "Book this service",
+    "noIdeaTitle": "Not sure which service to choose?",
+    "contactMe": "Contact me to discuss"
+  },
+  "method": {
+    "hero": {
+      "title": "A Scientific & Compassionate Approach",
+      "subtitle": "Dog training has evolved. Forget dominance and force. My methodology is based on ethology and the laws of learning for lasting results."
+    },
+    "philosophy": {
+      "title1": "Compassionate Training",
+      "p1": "Far from being a \"permissive\" method, compassionate training is a rigorous approach that respects the physical and emotional integrity of the dog. We do not seek to submit the animal, but to obtain its ",
+      "p1Strong": "voluntary cooperation",
+      "p2": "In concrete terms, we reinforce good behaviors (rewards, games, praise) so that they are repeated, and we manage the environment to avoid mistakes, without ever using fear or pain.",
+      "frameTitle": "A Structuring Framework",
+      "frameDesc": "Compassion does not mean laxity. I work with a clear and coherent framework. Rules and boundaries are essential for your dog to feel secure. My role is to help you set this structuring framework, but always in a fair and explainable way to the dog.",
+      "title2": "Validated by Science",
+      "p3": "My practice is based on factual data from ethology (the study of behavior) and behavioral psychology.",
+      "point1Title": "Operant Conditioning (Skinner): ",
+      "point1Desc": "The dog learns through the consequences of its actions. A pleasant consequence reinforces the behavior.",
+      "point2Title": "Respect for Individuality: ",
+      "point2Desc": "Every dog has its own motivations, fears, and tolerance thresholds. No \"magic recipe\", but a tailor-made approach.",
+      "point3Title": "Intelligence as a Driver: ",
+      "point3Desc": "Your dog is a being endowed with exceptional cognitive abilities. Rather than using coercion or coercive tools, we stimulate its intelligence. It is its capacity to think and understand that generates lasting progress."
+    },
+    "process": {
+      "title": "A 4-Step Process",
+      "subtitle": "From the first contact to autonomy, here is how we will work together.",
+      "steps": [
+        {
+          "title": "1. Initial Contact",
+          "desc": "A phone call to identify your needs and verify that I am the right person to help you."
+        },
+        {
+          "title": "2. Assessment",
+          "desc": "(Behavioral Assessment). At your home, a complete analysis of the environment and the dog (2 hours)."
+        },
+        {
+          "title": "3. Personalized Plan",
+          "desc": "Implementation of an exercise protocol adapted to YOUR daily life and YOUR dog."
+        },
+        {
+          "title": "4. Follow-up & Progress",
+          "desc": "Practical sessions to adjust, progress, and validate skills until autonomy."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to change the way you look at your dog?",
+      "btn": "Start with an assessment"
+    }
+  },
+  "faqPage": {
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Understand my profession, my methods, and how the sessions work."
+    },
+    "questions": [
+      {
+        "question": "What is a dog trainer and what do they do?",
+        "answer": "A dog trainer is a specialist in the Human-Dog relationship. My role is not simply to \"train\" your animal, but to provide you with the tools to understand and communicate clearly with them. This helps establish healthy living rules, solve everyday problems (potty training, destruction, loneliness), and guarantee the safety and well-being of everyone."
+      },
+      {
+        "question": "What can this bring me?",
+        "answer": "Beyond pure obedience, it brings you peace of mind. You will learn to decode your dog's signals, prevent conflicts, and strengthen your bond. It's an investment to build a harmonious relationship that will last 10 or 15 years."
+      },
+      {
+        "question": "Who is this for?",
+        "answer": "Everyone! Puppy owners who want to start on the right foot, families experiencing difficulties with an adult dog, or simply enthusiasts who want to deepen their bond. There are no \"bad owners\", only pairs that need adjustments."
+      },
+      {
+        "question": "When should I call a dog trainer?",
+        "answer": "Prevention is ideal: as soon as the puppy arrives or even before adoption. However, you should consult as soon as a problematic behavior appears (aggression, fear, excessive barking). Do not wait for the situation to escalate; it is always easier to prevent than to cure."
+      },
+      {
+        "question": "Is it still possible to change my dog's behavior (despite their age/past)?",
+        "answer": "YES, absolutely. A dog's brain remains plastic throughout its life. Whether they are 5, 10 years old, or have a heavy past (shelter, abuse), we can always modify behaviors and soothe emotions. It sometimes requires more patience than with a puppy, but progress is always possible."
+      },
+      {
+        "question": "What methods do you use?",
+        "answer": "I work exclusively with positive and compassionate methods, based on behavioral sciences (ethology). We use the dog's motivation (toys, rewards) to reinforce good behaviors. I refuse any coercive tools (choke collars, shock collars) or physical/psychological violence."
+      },
+      {
+        "question": "Where do the sessions take place?",
+        "answer": "The Behavioral Assessment (1st session) must take place at your home to observe the dog in its real environment. Follow-up sessions can then take place at home or outdoors (park, city, forest) depending on the issues to be addressed (loose leash walking, recall, socialization)."
+      },
+      {
+        "question": "How do I request a first session?",
+        "answer": "You can contact me via the website form or by phone. Together we will arrange an appointment for a Behavioral Assessment (duration 1.5 to 2 hours). This is the essential step for me to analyze the situation and offer you a customized training plan."
+      },
+      {
+        "question": "Do you offer payment plans?",
+        "answer": "Yes. The behavioral assessment must be paid on the day of the session. However, for training or rehabilitation packages, you have the option to pay in 2 installments free of charge to spread the cost."
+      }
+    ],
+    "cta": {
+      "title": "Didn't find your answer?",
+      "desc": "Every situation is unique. Do not hesitate to contact me to discuss it in person.",
+      "btn": "Ask me a question"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Let's talk about your dog",
+      "subtitle": "A question? A behavioral problem? Fill out this comprehensive form so I can analyze your situation."
+    },
+    "info": {
+      "title": "My contact details",
+      "phoneTitle": "Phone & WhatsApp",
+      "phoneDesc": "Reply within 24h (leave a message)",
+      "emailTitle": "Email",
+      "zoneTitle": "Service Area",
+      "zoneDesc": "I travel to your home within a 50km radius.",
+      "whatsappBtn": "Chat on WhatsApp",
+      "instaTitle": "Follow the daily routine"
+    },
+    "form": {
+      "whyTitle": "Why request an assessment?",
+      "whyDesc": "The behavioral assessment is the essential first step. It does not commit you to a package, but it already provides you with concrete answers and an action plan adapted to your dog.",
+      "title": "Send me a message",
+      "successTitle": "Message sent!",
+      "successDesc": "Thank you for contacting me. I will get back to you very soon (usually within 24h).",
+      "successBtn": "Send another message",
+      "section1": "Your Information",
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "city": "City of residence *",
+      "section2": "Your Dog",
+      "dogName": "Name *",
+      "dogAge": "Age *",
+      "dogBreed": "Breed / Type *",
+      "section3": "Contact & Request",
+      "email": "Email *",
+      "phone": "Phone *",
+      "subject": "I am interested in...",
+      "subjectOptions": {
+        "bilan": "Behavioral Assessment (Recommended)",
+        "chiot": "Puppy School",
+        "education": "Adult Training",
+        "balade": "Educational Walks",
+        "autre": "Other request"
+      },
+      "message": "Your message",
+      "messagePlaceholder": "Briefly tell me about the difficulties you are facing with your dog...",
+      "submitBtn": "Send my request",
+      "submittingBtn": "Sending...",
+      "disclaimer": "By submitting this form, you agree to be contacted regarding your request. Your data remains confidential."
+    }
+  },
+  "experiencesData": [
+    {
+      "id": 1,
+      "year": "2023 - Present",
+      "title": "Dog Training Center Instructor",
+      "location": "Group Classes",
+      "description": "Leading group sessions: socialization, obedience, and managing dog interactions."
+    },
+    {
+      "id": 2,
+      "year": "2022 - 2023",
+      "title": "Dog Boarding Manager",
+      "location": "Navarre (Spain)",
+      "description": "Full management of a boarding facility: daily care, logistics, and animal welfare."
+    },
+    {
+      "id": 3,
+      "year": "2022",
+      "title": "Behavioral Disorders Specialization",
+      "location": "With Nicolas Greveldinger",
+      "description": "Expert training on behavioral rehabilitation and managing complex cases."
+    },
+    {
+      "id": 4,
+      "year": "2020 - 2022",
+      "title": "Rehabilitation & Support",
+      "location": "Animal Shelter",
+      "description": "Support and rehabilitation of rescued dogs in the adoption process (Perros rescatados)."
+    },
+    {
+      "id": 5,
+      "year": "2020",
+      "title": "Handling Shelter Dogs",
+      "location": "Specialized Training",
+      "description": "Safety and approach techniques for fearful or defensive dogs in confined spaces."
+    },
+    {
+      "id": 6,
+      "year": "2019",
+      "title": "Categorized Dogs Certification",
+      "location": "Official Certification",
+      "description": "Training in handling and managing so-called 'dangerous' dogs (1999 Law)."
+    },
+    {
+      "id": 7,
+      "year": "2019",
+      "title": "Canine First Aid",
+      "location": "Certified Training",
+      "description": "Mastery of first aid and emergency care for dogs."
+    },
+    {
+      "id": 8,
+      "year": "2018",
+      "title": "National Dog Trainer Diploma",
+      "location": "France",
+      "description": "Obtained the state diploma. Theoretical and practical foundation of dog training."
+    }
+  ]
 }
